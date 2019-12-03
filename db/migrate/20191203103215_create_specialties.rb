@@ -1,6 +1,6 @@
-class CreateSpecialities < ActiveRecord::Migration[5.2]
+class CreateSpecialties < ActiveRecord::Migration[5.2]
   def change
-    create_table :specialities do |t|
+    create_table :specialties do |t|
       t.string :name
       t.string :description
       t.boolean :local
