@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2019_12_03_133657) do
   create_table "specialties", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.boolean "local"
+    t.boolean "local", default: false
     t.string "country"
     t.string "city"
     t.string "region"
