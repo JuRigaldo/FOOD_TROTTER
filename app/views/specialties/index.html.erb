@@ -4,7 +4,9 @@
 <%= render 'shared/navbar' %>
 
 <% @specialties.each do |specialty| %>
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://static.cuisineaz.com/240x192/i119038-.jpeg)">
   <p><%=specialty.name %></p>
+</div>
 <% end %>
 
 
