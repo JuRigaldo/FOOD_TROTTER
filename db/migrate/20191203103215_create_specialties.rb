@@ -3,7 +3,7 @@ class CreateSpecialties < ActiveRecord::Migration[5.2]
     create_table :specialties do |t|
       t.string :name
       t.string :description
-      t.boolean :local
+      t.boolean :local, default: false
       t.string :country
       t.string :city
       t.string :region
