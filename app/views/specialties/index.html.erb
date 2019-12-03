@@ -1,6 +1,14 @@
 <h1>All specialties</h1>
 
+
 <%= render 'shared/navbar' %>
+
+<% @specialties.each do |specialty| %>
+  <p><%=specialty.name %></p>
+<% end %>
+
+
+
 
 
 Le Boulonnais, surnommé le « pur-sang des chevaux de trait » ou le « colosse en marbre blanc », est une race de chevaux de trait originaire du Boulonnais, région française de la côte de la Manche. Historiquement élevé dans tout le Pas-de-Calais, la Picardie et le pays de Caux, en France, ce cheval est réputé, selon sa légende, descendre d'étalons orientaux de passage durant l'Antiquité. Il est davantage influencé par la sélection de ses éleveurs, ainsi que les conditions climatiques et géographiques de sa région originelle.
