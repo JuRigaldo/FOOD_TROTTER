@@ -2,9 +2,12 @@
   "name": "FOOD_TROTTER",
   "private": true,
   "dependencies": {
+    "@mapbox/mapbox-gl-geocoder": "^4.5.0",
     "@rails/webpacker": "^4.2.0",
     "bootstrap": "^4.4.1",
     "jquery": "^3.4.1",
+    "mapbox-gl": "^1.5.1",
+    "places.js": "^1.17.1",
     "popper.js": "^1.16.0"
   },
   "devDependencies": {
