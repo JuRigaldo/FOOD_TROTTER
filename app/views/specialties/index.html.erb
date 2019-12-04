@@ -3,6 +3,10 @@
 
 
 
+
+
+<%= render 'shared/navbar' %>
+
 <% @specialties.each do |specialty| %>
 <div class="container">
   <div class="row m-0">
@@ -29,5 +33,3 @@
   <%= f.submit "Search", class: "btn btn-primary" %>
   <%= link_to "Reset", root_path  %>
 <% end %>
-
-
