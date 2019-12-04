@@ -1,15 +1,29 @@
 .card-category {
   background-size: cover;
   background-position: center;
-  height: 180px;
+  height: 140px;
   display: flex;
   justify-content: left;
-  align-items: bottom;
+  align-items: flex-end;
   color: white;
   font-size: 12px;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 5px -8px;
+  position: relative;
 }
-
+.row {
+  justify-content: space-around;
+}
+.specialty-name {
+  margin-left: 8px;
+}
+.favorites {
+  color: $sugar;
+  font-size: 20px;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+}
