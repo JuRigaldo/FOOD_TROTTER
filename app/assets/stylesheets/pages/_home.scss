@@ -1,1 +1,22 @@
 // Specific CSS for your home-page
+.homepage {
+  background-color: $mint;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.name {
+  color: $sugar;
+  letter-spacing: 5px;
+  font-size: 36px;
+  font-family: $homepage;
+}
+
+.bordure {
+border-top:1px solid $sugar;
+width: 205px;
+margin: 0 80px 0 80px;
+}
