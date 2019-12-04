@@ -5,7 +5,7 @@ class SpecialtiesController < ApplicationController
   end
 
   def show
-    @specialty = Specialty.find[params[:id]]
+    @specialty = Specialty.find(params[:id])
   end
 
 end
