@@ -12,9 +12,12 @@ Restaurant.destroy_all
 Specialty.destroy_all
 SpecialtyRestaurant.destroy_all
 
-ramen = Specialty.create!(name: 'Ramen', description: 'Nouilles sautées', country: 'Japon')
-takoyaki = Specialty.create!(name: 'Takoyaki', description: 'Boulettes de pâtes', country: 'Japon', city: 'Osaka')
-kobe = Specialty.create!(name: 'Boeuf de Kobe', description: 'Viande de boeuf', country: 'Japon', region: 'Kobe')
+categories = ["Accompagnement", "Burger", "Curry", "Dessert", "Fruits de mer", "Friture", "Insectes", "Nouilles", "Oeuf", "Pain", "Pâtes", "Poisson", "Ragoût", "Ravioli", "Riz", "Sandwich", "Snack", "Soupe", "Street food", "Viande", "Volaille"]
+timetoeats = ["Petit-déjeuner", "Déjeuner/ Dîner", "Goûter", "Boire"]
+
+ramen = Specialty.create!(name: 'Ramen', description: 'Nouilles sautées', country: 'Japon', category_list: "Nouilles", timetoeat_list: "Déjeuner/ Dîner" )
+takoyaki = Specialty.create!(name: 'Takoyaki', description: 'Boulettes de pâtes', country: 'Japon', city: 'Osaka', category_list: "Fruits de mer", timetoeat_list: "Déjeuner/ Dîner")
+kobe = Specialty.create!(name: 'Boeuf de Kobe', description: 'Viande de boeuf', country: 'Japon', region: 'Kobe', category_list: "Viande", timetoeat_list: "Goûter")
 
 restaurant1 = Restaurant.create!(name: Faker::Restaurant.name, address: Faker::Address.full_address, phone_number: Faker::PhoneNumber.phone_number, recommendation: 4, opening_time: '12h00 à 14h00')
 restaurant2 = Restaurant.create!(name: Faker::Restaurant.name, address: Faker::Address.full_address, phone_number: Faker::PhoneNumber.phone_number, recommendation: 4, opening_time: '20h00 à 22h00')
