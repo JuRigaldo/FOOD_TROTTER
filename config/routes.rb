@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   resources :specialties, only: [:index, :show] do
     resources :restaurants, only: [:index, :show]
   end
+
+  get '/tagged', to: "restaurants#tagged", as: :tagged
 end
