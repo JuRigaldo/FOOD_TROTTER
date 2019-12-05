@@ -15,4 +15,7 @@ class SpecialtiesController < ApplicationController
     @specialty = Specialty.find(params[:id])
   end
 
+  def specialty_params
+    params.require(:specialty).permit(:title, :body, :photo)
+  end
 end
