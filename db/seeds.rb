@@ -15,6 +15,17 @@ SpecialtyRestaurant.destroy_all
 categories = ["Accompagnement", "Burger", "Curry", "Dessert", "Fruits de mer", "Friture", "Insectes", "Nouilles", "Oeuf", "Pain", "Pâtes", "Poisson", "Ragoût", "Ravioli", "Riz", "Sandwich", "Snack", "Soupe", "Street food", "Viande", "Volaille"]
 timetoeats = ["Petit-déjeuner", "Déjeuner/ Dîner", "Goûter", "Boire"]
 
+
+url = 'https://res.cloudinary.com/geraldinefd/image/upload/v1575540381/okonomiyaki.jpg'
+okonomiyaki = Specialty.new(name: 'Okonomiyaki', description: "Du japonais okonomi qui signifie 'ce que vous voulez', c'est 'ZE' plat star à Osaka !
+Ce plat contient du chou, de la viande (du porc en général) ou du poisson réunis dans une pâte qui s'apparente un peu à notre pâte à crêpe. Tout ce petit monde va venir cuire ensuite sur une plaque chauffante. Sachez que dans la plupart des restaurants, il est possible que vous mettiez la main à la pâte (muahaha) en la cuisant vous-même !", country: 'Japon', city: "Osaka", category_list: "Oeuf, Poisson, Viande", timetoeat_list: "Déjeuner/ Dîner" )
+okonomiyaki.remote_photo_url = url
+okonomiyaki.save
+
+url = 'https://res.cloudinary.com/geraldinefd/image/upload/v1575543971/ramen.jpg'
+ramen = Specialty.new(name: 'Ramen', description: 'Plat préféré de Naruto, les ramen sont des nouilles servies dans un bouillon. Elles sont généralement accompagnées de légumes, viande (plutôt du porc) ou poisson. A savoir : il y a BEAUCOUP de versions de ramen au Japon. Elles varient selon les régions. ', country: 'Japon', category_list: "Nouilles, Pâtes, Soupe, Poisson, Viande", timetoeat_list: "Déjeuner/ Dîner" )
+ramen.remote_photo_url = url
+ramen.save
 url = 'https://res.cloudinary.com/geraldinefd/image/upload/v1575543971/ramen.jpg'
 ramen = Specialty.new(name: 'Ramen', description: 'Plat préféré de Naruto, les ramen sont des nouilles servies dans un bouillon. Elles sont généralement accompagnées de légumes, viande (plutôt du porc) ou poisson. A savoir : il y a BEAUCOUP de versions de ramen au Japon. Elles varient selon les régions. ', country: 'Japon', category_list: "Nouilles, Pâtes, Soupe, Poisson, Viande", timetoeat_list: "Déjeuner/ Dîner" )
 ramen.remote_photo_url = url

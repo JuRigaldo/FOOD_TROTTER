@@ -58,7 +58,15 @@ $b-pad-top: ($b-height / 2 - $b-bun-width-half); //Vertically centers bun in men
 
 
 body {
-  &:after {
+
+  &.open {
+    overflow: scroll;
+    .navbar-lewagon {
+      display:none;
+    }
+  }
+
+  &.open:after {
     background: color(primary);
     content: '';
     height: 100%;
@@ -70,16 +78,6 @@ body {
     top: 0;
     transition: $b-transition;
     width: 100%;
-  }
-
-  &.open {
-    overflow: scroll;
-    .navbar-lewagon {
-      display:none;
-    }
-  }
-
-  &.open:after {
     opacity: 1;
     visibility: visible;
   }

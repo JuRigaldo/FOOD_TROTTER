@@ -1,2 +1,4 @@
-<h2>@specialty.name</h2>
+<h2> <%= @specialty.name%></h2>
+<%= cl_image_tag @specialty.photo, height: 300, width: 400, crop: :fill %>
+<p><strong>Description: </strong><%= @specialty.description %></p>
 <%= render 'shared/navbar' %>
