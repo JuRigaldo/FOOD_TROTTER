@@ -1,0 +1,19 @@
+<div class="b-nav">
+  <%= simple_form_for :search, url: specialties_path, method: "GET" do |f| %>
+    <%= f.input :categories, label: "Category",  collection: $categories, as: :check_boxes %>
+    <%= f.input :timetoeats, label: "Time to eat", collection: $timetoeats, as: :check_boxes %>
+    <%= f.submit "Search", class: "btn btn-success" %>
+    <%= link_to "Reset", specialties_path  %>
+  <% end %>
+</div>
+
+<!-- Burger-Icon -->
+<div class="b-container">
+  <div class="b-menu">
+    <div class="b-bun b-bun--top"></div>
+    <div class="b-bun b-bun--mid"></div>
+    <div class="b-bun b-bun--bottom"></div>
+  </div>
+
+  <!-- Burger-Brand -->
+</div>
