@@ -1,0 +1,12 @@
+<%= simple_form_for :search, url: specialties_path, method: :get do |f| %>
+  <div class="search-form-control form-group">
+    <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Type a country"
+  %>
+    <button name="button" type="submit" class="btn btn-flat">
+      <i class="fas fa-search"></i> Search
+    </button>
+  </div>
+<% end %>
