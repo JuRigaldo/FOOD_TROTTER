@@ -3,6 +3,7 @@ class Specialty < ApplicationRecord
   validates :name, presence: true, uniqueness: true
   validates :description, presence: true
   validates :country, presence: true
+  mount_uploader :photo, PhotoUploader
 
   # acts_as_taggable
   acts_as_taggable_on :categories, :timetoeats
