@@ -12,6 +12,7 @@
 
 
 <%= render 'shared/navbar' %>
+<%= render 'shared/menuburger' %>
 
 <div class="container">
   <div class="box">
@@ -29,16 +30,3 @@
  
 
 </div>
-
-
-
-
-
-<%= simple_form_for :search, url: specialties_path, method: "GET" do |f| %>
-<%= f.input :categories, label: "Category",  collection: $categories, as: :check_boxes %>
-<%= f.input :timetoeats, label: "Time to eat", collection: $timetoeats, as: :check_boxes %>
-<%= f.submit "Search", class: "btn btn-primary" %>
-<%= link_to "Reset", specialties_path  %>
-<% end %>
-
-
