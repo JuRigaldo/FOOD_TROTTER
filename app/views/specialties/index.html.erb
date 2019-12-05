@@ -1,26 +1,44 @@
 <h1>All specialties</h1>
 
-<% @specialties.each do |specialty| %>
+
+
+
+
+
+
+
+
+<%= render 'shared/search' %>
+
+
+<%= render 'shared/navbar' %>
+
 <div class="container">
-  <div class="row m-0">
-    <div class="col-5 p-0">
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://static.cuisineaz.com/240x192/i119038-.jpeg)">
-        <div class="specialty-name"><%= link_to specialty.name, specialty_path(specialty) %></div>
-        <a href="#"><i class="far fa-heart favorites"></i></a>
+  <div class="box">
+  <% @specialties.each do |specialty| %>
+
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://static.cuisineaz.com/240x192/i119038-.jpeg)">
+      <div class="specialty-name"><%= link_to specialty.name, specialty_path(specialty) %>
       </div>
+      <a href="#"><i class="far fa-heart favorites"></i></a>
     </div>
-    <div class="col-5 p-0">
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://static.cuisineaz.com/240x192/i119038-.jpeg)">
-        <div class="specialty-name"><%= link_to specialty.name, specialty_path(specialty) %></div>
-        <a href="#"><i class="far fa-heart favorites"></i></a>
-      </div>
-    </div>
+
+  <% end %>
   </div>
-  <% end %>
-  <%= simple_form_for :search, url: specialties_path, method: "GET" do |f| %>
-  <%= f.input :categories, label: "Category",  collection: $categories, as: :check_boxes %>
-  <%= f.input :timetoeats, label: "Time to eat", collection: $timetoeats, as: :check_boxes %>
-  <%= f.submit "Search", class: "btn btn-primary" %>
-  <%= link_to "Reset", specialties_path  %>
-  <% end %>
+
+ 
+
 </div>
+
+
+
+
+
+<%= simple_form_for :search, url: specialties_path, method: "GET" do |f| %>
+<%= f.input :categories, label: "Category",  collection: $categories, as: :check_boxes %>
+<%= f.input :timetoeats, label: "Time to eat", collection: $timetoeats, as: :check_boxes %>
+<%= f.submit "Search", class: "btn btn-primary" %>
+<%= link_to "Reset", specialties_path  %>
+<% end %>
+
+
