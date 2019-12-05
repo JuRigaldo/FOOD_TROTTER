@@ -15,12 +15,24 @@
   position: relative;
   text-decoration: none;
 }
-.row {
-  justify-content: space-around;
+
+@media(max-width: 768px) {
+  .box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px 30px;
+    margin-right: 3%;
+  }
 }
+
 .specialty-name {
   margin-left: 8px;
 }
+
+.specialty-name a {
+  color: $sugar;
+}
+
 .favorites {
   color: $sugar;
   font-size: 20px;
