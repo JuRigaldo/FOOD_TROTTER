@@ -1,8 +1,11 @@
-<div
-  id="map"
-  style="width: 100%;
-  height: 600px;"
-  data-markers="<%= @markers.to_json %>"
-  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-></div>
 
+<%= @specialty.name %>
+
+<% @specialty_restaurants.each do |specialty_restaurant| %>
+
+
+<%= link_to specialty_restaurant.restaurant.name, restaurant_path(specialty_restaurant.restaurant.id) %>
+
+
+
+<% end %>
