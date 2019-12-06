@@ -2,7 +2,9 @@ import "bootstrap";
 import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { initMapbox } from '../plugins/init_mapbox';
+import { initFavorite } from '../plugins/favorite';
 // import { menuBurger } from '../plugins/menu_burger';
+
 
 initMapbox();
 'use strict';
@@ -18,7 +20,11 @@ initMapbox();
       el.classList.toggle('open');
     });
   }, false);
+
+  initFavorite();
 })();
 
 // export { menuBurger };
+
+
 

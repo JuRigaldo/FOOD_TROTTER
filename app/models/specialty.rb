@@ -7,6 +7,9 @@ class Specialty < ApplicationRecord
 
   # acts_as_taggable
   acts_as_taggable_on :categories, :timetoeats
+  # acts_as_favoritor
+  acts_as_favoritable
+
 
   include PgSearch::Model
   pg_search_scope :global_search,
@@ -21,4 +24,5 @@ class Specialty < ApplicationRecord
 
   $categories = ["Accompagnement", "Burger", "Curry", "Dessert", "Fruits de mer", "Friture", "Insectes", "Nouilles", "Oeuf", "Pain", "Pâtes", "Poisson", "Ragoût", "Ravioli", "Riz", "Sandwich", "Snack", "Soupe", "Street food", "Viande", "Volaille"]
   $timetoeats = ["Petit-déjeuner", "Déjeuner/ Dîner", "Goûter", "Boire"]
+
 end

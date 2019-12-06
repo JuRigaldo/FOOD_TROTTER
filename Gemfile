@@ -23,7 +23,8 @@ gem 'acts-as-taggable-on', '~> 6.0'
 gem 'pg_search'
 gem 'cloudinary', '~> 1.9.1'
 gem 'carrierwave', '~> 1.2'
-
+gem 'acts_as_favoritor'
+gem 'jquery-rails'
 
 
 group :development do

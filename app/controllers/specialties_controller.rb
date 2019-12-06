@@ -1,5 +1,5 @@
 class SpecialtiesController < ApplicationController
-
+before_action :set_specialty, only: [:show, :like, :unlike]
 
   def index
     if params["search"]
@@ -14,11 +14,22 @@ class SpecialtiesController < ApplicationController
     end
   end
 
-  def show
-    @specialty = Specialty.find(params[:id])
+  def like
+#A CHANGER : IF-ELSE
+    if current_user.favorite(@specialty)
+    render json: @specialty
+    else
+    end
   end
+
+  private
 
   def specialty_params
     params.require(:specialty).permit(:photo)
   end
+
+  def set_specialty
+    @specialty = Specialty.find(params[:id])
+  end
+
 end
