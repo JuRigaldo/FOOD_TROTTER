@@ -3,4 +3,5 @@
 <a href="#"><i class="far fa-heart favorites"></i></a>
 </div>
 <p><strong>Description: </strong><%= @specialty.description %></p>
+<%= link_to @specialty.name, specialty_restaurants_path(@specialty) %>
 <%= render 'shared/navbar' %>

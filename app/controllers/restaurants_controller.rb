@@ -1,6 +1,9 @@
 class RestaurantsController < ApplicationController
 
   def index
+    @specialty_restaurants = SpecialtyRestaurant.where(specialty: params[:specialty_id])
+    @specialty = Specialty.find(params[:specialty_id])
+
     @restaurants = Restaurant.geocoded
     @markers = @restaurants.map do |restaurant|
       {
@@ -10,7 +13,6 @@ class RestaurantsController < ApplicationController
         # image_url: helpers.asset_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
       }
     end
-    @restaurants = Restaurant.all
   end
 
   def show
