@@ -1,0 +1,12 @@
+ <div class="votes">
+    <% unless current_user.liked? specialty %>
+       <%= link_to unlike_specialty_path(specialty), method: :get, remote: true, class: 'unlike_specialty' do %>
+       <i class="far fa-heart favorites"></i>
+     <% end %>
+       <% else %>
+       <%= link_to like_specialty_path(specialty), method: :get, remote: true, class: 'like_specialty' do %>
+       <i class="fa fa-heart"></i>
+    <% end %>
+   <% end %>
+  </div>
+  </td>
