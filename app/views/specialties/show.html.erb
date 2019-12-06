@@ -1,4 +1,5 @@
 <h2> <%= @specialty.name%></h2>
 <%= cl_image_tag @specialty.photo, height: 300, width: 400, crop: :fill %>
 <p><strong>Description: </strong><%= @specialty.description %></p>
+<%= link_to @specialty.name, specialty_restaurants_path(@specialty) %>
 <%= render 'shared/navbar' %>

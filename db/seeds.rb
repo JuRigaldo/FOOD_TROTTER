@@ -73,4 +73,6 @@ ajinoya = Restaurant.create!(name: "Ajinoya", address: "1-7-16 Nambo, Chuo-ku, O
 okaru = Restaurant.create!(name: "Okaru" , address: "1 Chome-9-19 Sennichimae, Chuo Ward, Osaka, 542-0074", phone_number: "+81 6-6211-0985", recommendation: 198, opening_time: '12h00-14h30 17h00-22h00')
 chibo = Restaurant.create!(name: "Chibo Dotonburi", address: "1-5-5 Dotonbori, Chuo-ku, Osaka", phone_number: "+81 6-6212-2211", recommendation: 174, opening_time: '11h00 à 01h00')
 
+specialty_resto1 = SpecialtyRestaurant.new(restaurant: ajinoya, specialty: takoyaki)
+specialty_resto1.save
 puts '...finished'
