@@ -1,12 +1,11 @@
 <div class="b-nav">
   <%= simple_form_for :search, url: specialties_path, method: "GET" do |f| %>
-    <%= f.input :timetoeats, label: "Time to eat", collection: $timetoeats, as: :check_boxes %>
+    <%= f.input :timetoeats, label: "Time to eat", collection: $timetoeats, as: :check_boxes, class: "eat" %>
     <%= f.input :categories, label: "Category",  collection: $categories, as: :check_boxes %>
     <%= f.submit "Search", class: "btn btn-success" %>
     <%= link_to "Reset", specialties_path  %>
   <% end %>
 </div>
-
 <!-- Burger-Icon -->
 <div class="b-container">
   <div class="b-menu">

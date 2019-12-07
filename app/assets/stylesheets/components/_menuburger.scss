@@ -135,7 +135,6 @@ body {
   background-color: $mint;
   position: relative;
   transition: $b-transition;
-  background-color: $mint;
 
   &--top {
     height: $b-bun-height;
@@ -166,7 +165,7 @@ body {
     .bun-top,
     .bun-mid,
     .bun-bottom {
-      color: $mint;
+      color: $sugar;
     }
   }
 

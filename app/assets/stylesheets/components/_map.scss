@@ -6,3 +6,18 @@
   text-align: center;
   font-family: 'Open Sans', sans-serif;
 }
+
+.localisation {
+  font-family: 'Open Sans', sans-serif;
+  background-color: $mint;
+  color: $sugar;
+  text-align: center;
+  height: 50px;
+  padding: 10px;
+  letter-spacing: 2px;
+  align-items: center;
+}
+.localisation a {
+  color: $sugar;
+}
+
