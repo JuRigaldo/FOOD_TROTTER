@@ -31,7 +31,7 @@ $b-txt-pad: 30px; //Left padding on both brand and links
 $b-line-height: ($b-height / 2 - ($b-font-size / 2.8)); //Vertically centers brand to menu
 $b-txt-pad-top: ($b-margin-top + $b-height + $b-txt-pad); //Top margin for first link element
 $b-bun-width-half: ($b-bun-width / 2); //Half bun width used for calculation
-$b-pad-left: 31px; //Horizontally centers bun in menu
+$b-pad-left: 38px; //Horizontally centers bun in menu
 $b-pad-top: 53px; //Vertically centers bun in menu
 
 @keyframes slideInLeft {
