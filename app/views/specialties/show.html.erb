@@ -6,7 +6,7 @@
     <div class="card-category card" style="background-image: url('<%= cl_image_path @specialty.photo, height: 300, width: 400, crop: :fill %>')">
       <div class="specialty-name">
       </div>
-      <i class="far fa-heart favorites" data-id="<%= @specialty.id %>"></i>
+      <i class="far fa-heart favorites <%= current_user.favorited?(@specialty) ? "liked" : "" %>" data-id="<%= @specialty.id %>"></i>
     </div>
     <div class="btn food">
       <%= link_to specialty_restaurants_path(@specialty) do %>

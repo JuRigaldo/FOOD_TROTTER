@@ -18,4 +18,15 @@ class RestaurantsController < ApplicationController
   def show
     @restaurant = Restaurant.find(params[:id])
   end
+
+  def like
+    if current_user.favorited?(@restaurant)
+      current_user.unfavorite(@restaurant)
+      result = {liked: false}
+    else
+      current_user.favorite(@restaurant)
+      result = {liked: true}
+    end
+    render json: result
+  end
 end
