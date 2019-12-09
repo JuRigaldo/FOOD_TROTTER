@@ -1,12 +1,44 @@
 <div class="b-nav">
+  <div class="localisation">Filtres</div>
   <%= simple_form_for :search, url: specialties_path, method: "GET" do |f| %>
-    <%= f.input :timetoeats, label: "Time to eat", collection: $timetoeats, as: :check_boxes %>
-    <%= f.input :categories, label: "Category",  collection: $categories, as: :check_boxes %>
-    <%= f.submit "Search", class: "btn btn-success" %>
-    <%= link_to "Reset", specialties_path  %>
+  <%= f.input :timetoeats, label: "Time to eat", collection: $timetoeats, as: :check_boxes, :required => false, class: "invisible" %>
+  <p class="kaka"><strong>Time to eat</strong></p>
+  <% $timetoeats.each do |status| %>
+    <div class="custom-control custom-switch">
+      <div class="row">
+        <div class="col-10">
+            <%= status %>
+        </div>
+        <div class="col-2">
+            <input type="checkbox" name="search[timetoeats][]" class="custom-control-input" id="<%= status %>" name="search[timetoeats][]" value="<%= status %>">
+            <label class="custom-control-label" style="margin-left: 10px;" for="<%= status %>"></label>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  <%= f.input :categories, label: "Category",  collection: $categories, as: :check_boxes, :required => false, class: "invisible" %>
+  <p style="margin: 10px;"><strong>Categories</strong></p>
+  <% $categories.each do |status| %>
+    <div class="custom-control custom-checkbox">
+      <div class="row">
+        <div class="col-10">
+            <%= status %>
+        </div>
+        <div class="col-2">
+            <input type="checkbox" class="custom-control-input" name="search[timetoeats][]" id="<%= status %>" name="search[timetoeats][]" value="<%= status %>">
+            <label class="custom-control-label" for="<%= status %>"></label>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  <div class="b-footer">
+    <%= f.submit "Terminé", class: "btn btn-custom btn-block" %>
+    <!-- <a><%= link_to "Reset", specialties_path, class: "btn btn-light"  %></a> -->
+  </div>
   <% end %>
 </div>
 
+</div>
 <!-- Burger-Icon -->
 <div class="b-container">
   <div class="b-menu">
@@ -15,3 +47,5 @@
     <div class="b-bun b-bun--bottom"></div>
   </div>
 </div>
+
+
