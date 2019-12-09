@@ -67,7 +67,7 @@ teriyaki.remote_photo_url = url
 teriyaki.save
 
 url = 'https://res.cloudinary.com/geraldinefd/image/upload/v1575540386/mochi.jpg'
-mochi = Specialty.new(name: 'Mochi', description: "Le mochi est un gâteau en forme de boulette à base de riz gluant. Il est généralement fourré à la pâte d'haricot rouge. C'est une spécialité surtout consommée pour les fêtes, principalement en Janvier.", country: "Japon", category_list: "Riz, Dessert" , timetoeat_list: "Goûter", point: 100)
+mochi = Specialty.new(name: 'Mochi', description: "Le mochi est un gâteau en forme de boulette à base de riz gluant. Il est généralement fourré à la pâte d'haricot rouge. C'est une spécialité surtout consommée pour les fêtes, principalement en Janvier.", country: "Japon", category_list: "Riz, Dessert" , timetoeat_list: "Goûter", point: 500)
 mochi.remote_photo_url = url
 mochi.save
 
@@ -127,5 +127,6 @@ user1 = User.create!(username: "Toto", email: "toto@gmail.com", password: "passw
 
 game1 = Game.new(user: user1, specialty: okonomiyaki)
 game1.save
-
+game2 = Game.new(user: user1, specialty: mochi)
+game2.save
 puts '...finished'

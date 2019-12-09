@@ -1,11 +1,14 @@
 
 <%= render 'shared/navbar' %>
-<div class="container">
+
+
   <div class="imageup">
     <div class="card-restaurant-image" style="background-image: url('<%=cl_image_path @restaurant.photo, height: 300, width: 100, crop: :fill  %>')">
       <i class="far fa-heart favorites <%= current_user.favorited?(@restaurant) ? "liked" : "" %>" data-id="<%= @restaurant.id %>"></i>
     </div>
   </div>
+
+<div class="container">
   <div class="restaurant-description">
     <div class="titlerestaurant">
       <h3> <%= @restaurant.name %> </h3>
