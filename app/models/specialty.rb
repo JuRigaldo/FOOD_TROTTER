@@ -1,5 +1,6 @@
 class Specialty < ApplicationRecord
   has_many :specialty_restaurants, dependent: :destroy
+  has_many :games, dependent: :destroy
   validates :name, presence: true, uniqueness: true
   validates :description, presence: true
   validates :country, presence: true
