@@ -40,11 +40,11 @@ sushi.remote_photo_url = url
 sushi.save
 
 url = 'https://res.cloudinary.com/geraldinefd/image/upload/v1575558260/Onigiri.jpg'
-onigiri = Specialty.new(name: 'Onigiri', description: "Un petit snack pas cher mais savoureux et réconfortant. Il s'agit d'une boulette de riz, généralement enveloppée dans une algue et fourrée avec du poisson ou de la prune salée. Elle peut se présenter sous forme de triangle ou de boule ou de galette. On en trouve un peu partout dans les supérettes.)", country: "Japon", category_list: "Riz, Poisson, Snack", timetoeat_list: "Goûter")
+onigiri = Specialty.new(name: 'Onigiri', description: "Un petit snack pas cher mais savoureux et réconfortant. Il s'agit d'une boulette de riz, généralement enveloppée dans une algue et fourrée avec du poisson ou de la prune salée. Elle peut se présenter sous forme de triangle ou de boule ou de galette. On en trouve un peu partout dans les supérettes.", country: "Japon", category_list: "Riz, Poisson, Snack", timetoeat_list: "Goûter")
 onigiri.remote_photo_url = url
 onigiri.save
 
-url = 'https://res.cloudinary.com/geraldinefd/image/upload/v1575558328/boeuf.jpg'
+url = 'https://res.cloudinary.com/geraldinefd/image/upload/v1575816684/kobe_r568vi.jpg'
 kobe = Specialty.new(name: 'Boeuf de Kobe', description: "Tu as sûrement déjà entendu parler du bœuf de Kobé ? Si non, sache que c'est la crème de la crème en matière de bœuf. On raconte même que les bêtes seraient massés et nourris à la bière. Evidemment, le prix suit aussi cette réputation de luxe. Il y a plusieurs classifications, à toi de choisir selon tes goûts... et ton budget.", country: 'Japon', region: 'Kansai', city: "Kobé", category_list: "Viande", timetoeat_list: "Déjeuner/ Dîner")
 kobe.remote_photo_url = url
 kobe.save
@@ -55,7 +55,7 @@ yatsuhashi.remote_photo_url = url
 yatsuhashi.save
 
 url = 'https://res.cloudinary.com/geraldinefd/image/upload/v1575558500/gyosas_bvuqqg.jpg'
-gyozas = Specialty.new(name: 'Gyosas', description: "Dérivé du ravioli chinois, le gyoza est un mets très populaire au Japon. Il est généralement fourré de légumes et de porc. Il peut être rissolé, bouilli ou frit. Ils sont servis en général par 6 ou 12 et s'accompagnent de sauce soja.", country: "Japon", category_list: "Volaille, Viande, Ravioli", timetoeat_list: "Déjeuner/ Dîner" )
+gyozas = Specialty.new(name: 'Gyozas', description: "Dérivé du ravioli chinois, le gyoza est un mets très populaire au Japon. Il est généralement fourré de légumes et de porc. Il peut être rissolé, bouilli ou frit. Ils sont servis en général par 6 ou 12 et s'accompagnent de sauce soja.", country: "Japon", category_list: "Volaille, Viande, Ravioli", timetoeat_list: "Déjeuner/ Dîner" )
 gyozas.remote_photo_url = url
 gyozas.save
 
@@ -68,6 +68,36 @@ url = 'https://res.cloudinary.com/geraldinefd/image/upload/v1575540386/mochi.jpg
 mochi = Specialty.new(name: 'Mochi', description: "Le mochi est un gâteau en forme de boulette à base de riz gluant. Il est généralement fourré à la pâte d'haricot rouge. C'est une spécialité surtout consommée pour les fêtes, principalement en Janvier.", country: "Japon", category_list: "Riz, Dessert" , timetoeat_list: "Goûter")
 mochi.remote_photo_url = url
 mochi.save
+
+url = 'https://res.cloudinary.com/geraldinefd/image/upload/v1575826317/inarizushi.jpg'
+inarizushi = Specialty.new(name: 'Inarizushi', description: "Les inarizushi sont constitués d'une poche de tofu frit sucré et remplie de riz vinaigré. Ils ont été inventés à Tokyo par un chef qui souhaitait les associer aux temples inari (dédiés à la déesse de la croissance du riz).", country: "Japon", region: "Kanto", city: "Tokyo", category_list: "Riz, Friture" , timetoeat_list: "Déjeuner/Dîner")
+inarizushi.remote_photo_url = url
+inarizushi.save
+
+url = 'https://res.cloudinary.com/geraldinefd/image/upload/v1575827374/1570648_a7806bdf6d1ed4d85d6ca2f395bcc45f_wnwex9.jpg'
+fugu = Specialty.new(name: 'Fugu', description: "Tu es un food trotter intrépide ? Le fugu, aussi appelé poisson globe contient un poison mortel. Il doit être vidé et débarrassé de ses parties toxiques par un chef spécialisé et possédant une licence. Il est généralement dégusté en sashimi. Attention, c'est un mets plutôt cher.", country: "Japon", region: "Kansai", city: "Osaka", category_list: "Poisson" , timetoeat_list: "Déjeuner/Dîner")
+fugu.remote_photo_url = url
+fugu.save
+
+url = 'https://res.cloudinary.com/geraldinefd/image/upload/v1575825291/poulpy.jpg'
+poulpy = Specialty.new(name: 'Sucette de poulpe', description: "Elle sont généralement laquées à la sauce soja avec... un oeuf de caille dans la tête. Elles se trouvent facilement sur les marchés d'Osaka.", country: "Japon", region: 'Kansai', city: "Osaka", category_list: "Snack" , timetoeat_list: "Goûter")
+poulpy.remote_photo_url = url
+poulpy.save
+
+url = 'https://res.cloudinary.com/geraldinefd/image/upload/v1575819209/kushikatsu.jpg'
+kushikatsu = Specialty.new(name: 'Kushikatsu', description: "Des fritures typiques d'Osaka au boeuf, porc, poulet, fruits de mer ou légumes. Elles sont en général servies sur des batônnets avec de la sauce Worcestshire. C'était un plat populaire pendant la guerre et il reste un des emblèmes de la street food aujourd'hui.", country: "Japon", region: 'Kansai', city: "Osaka", category_list: "Viande, Fruits de mer, Street food, Friture" , timetoeat_list: "Déjeuner/Dîner")
+kushikatsu.remote_photo_url = url
+kushikatsu.save
+
+url = 'https://res.cloudinary.com/geraldinefd/image/upload/v1575825687/ochazuke.jpg'
+ochazuke = Specialty.new(name: 'Ochazuke', description: "Un plat très simple qui se prépare en versant de l'eau chaude ou du thé vert sur un bol de riz. Il peut être agrémenté de sésame ou poisson. Attention, si on vous le propose à Kyoto c'est probablement parce que vous avez abusé de l'hospitalité de vos hôtes et qu'on vous demande poliment de partir.", country: "Japon", region: 'Kansai', city: "Kyoto", category_list: "Riz" , timetoeat_list: "Déjeuner/Dîner")
+ochazuke.remote_photo_url = url
+ochazuke.save
+
+url = 'https://res.cloudinary.com/geraldinefd/image/upload/v1575819836/rikuro.jpg'
+rikuro = Specialty.new(name: "Rikuro's cheesecake", description: "Il s'agit d'un gâteau ultra-moelleux (même qu'il gigote au toucher !) exclusif à Osaka. Très doux et crémeux, ils sont confectionnés le jour même à partir d'un fromage danois haut de gamme. Rien que regarder la mécanique bien huilée des pâtissiers et vendeurs vaut le détour. Dès la 1ère bouchée, on se retrouve sur un petit nuage !", country: "Japon", region: 'Kansai', city: "Osaka", category_list: "Dessert" , timetoeat_list: "Goûter")
+rikuro.remote_photo_url = url
+rikuro.save
 
 ajinoya = Restaurant.create!(name: "Ajinoya", address: "1-7-16 Nambo, Chuo-ku, Osaka 542-0076", phone_number: "+ 81 6-6211-0713", recommendation: 245, opening_time: '12h00 à 22h00')
 okaru = Restaurant.create!(name: "Okaru" , address: "1 Chome-9-19 Sennichimae, Chuo Ward, Osaka, 542-0074", phone_number: "+81 6-6211-0985", recommendation: 198, opening_time: '12h00-14h30 17h00-22h00')

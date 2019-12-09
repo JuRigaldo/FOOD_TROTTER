@@ -1,11 +1,7 @@
-<h1>All specialties</h1>
+<div class="container">
+<strong><h1>Lieu actuel &nbsp;<div class="black-title">|</div><div class="grey-title">&nbsp;OSAKA, Japon </div></h1></strong>
 
-
-
-
-
-
-
+<div class="margin">
 
 
 <%= render 'shared/search' %>
@@ -14,12 +10,27 @@
 <%= render 'shared/navbar' %>
 <%= render 'shared/menuburger' %>
 
-<div class="container">
+<div class="big-card">
+  <img src="https://res.cloudinary.com/geraldinefd/image/upload/v1575819172/Kitsune-Udon-w600_rfwl89.jpg" />
+  <div class="big-card-infos">
+<div class= "streamer">
+    <%= image_tag "streamer.png", width: 230 %>
+  </div>
+<div>
+      <h2>Suggestion</h2>
+      <p>Kitsune Udon</p>
+    </div>
+  </div>
+</div>
+
+<div class="une">À la une... </div>
+
   <div class="box">
   <% @specialties.each do |specialty| %>
 
+
     <div class="card-category" style="background-image: url('<%= cl_image_path specialty.photo, height: 300, width: 400, crop: :fill %>')">
-      <div class="specialty-name"><%= link_to specialty.name, specialty_path(specialty) %>
+      <div class="specialty-name"><%= link_to specialty.name, specialty_path(specialty), class: 'card-link' %>
       </div>
       <i class="far fa-heart favorites" data-id="<%= specialty.id %>"></i>
     </div>
@@ -28,5 +39,5 @@
   </div>
 
 
-
+</div>
 </div>
