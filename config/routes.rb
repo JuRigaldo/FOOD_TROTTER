@@ -21,7 +21,11 @@ Rails.application.routes.draw do
 
   end
 
-  resources :restaurants, only: [:show]
+  resources :restaurants, only: [:show] do
+    member do
+      get 'like', to: "restaurants#like"
+    end
+  end
 
   get '/tagged', to: "restaurants#tagged", as: :tagged
 

@@ -3,10 +3,12 @@ import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { initMapbox } from '../plugins/init_mapbox';
 import { initFavorite } from '../plugins/favorite';
+import { initLike } from '../plugins/favorite';
 // import { menuBurger } from '../plugins/menu_burger';
 
-
+if (document.querySelector('#map')) {
 initMapbox();
+}
 'use strict';
 
 (function() {
@@ -15,7 +17,7 @@ initMapbox();
   var containerHome = document.getElementsByClassName('container')[1];
   var burgerContain = document.getElementsByClassName('b-container')[0];
   var burgerNav = document.getElementsByClassName('b-nav')[0];
-
+  if (burgerMenu) {
   burgerMenu.addEventListener('click', function toggleClasses() {
     [body, burgerContain, burgerNav].forEach(function (el) {
       el.classList.toggle('open');
@@ -23,10 +25,17 @@ initMapbox();
 
     });
   }, false);
-
-  initFavorite();
+}
 })();
 
+if (document.querySelector('.favorites')) {
+  initFavorite();
+}
+if (document.querySelector('.favorites')) {
+
+initLike();
+
+}
 // export { menuBurger };
 
 
