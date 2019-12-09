@@ -1,0 +1,13 @@
+<h1>Mes favories</h1>
+
+<% @favorites.each do |favorite|%>
+  <div class="card-category" style="background-image: url('<%= cl_image_path favorite.photo, height: 300, width: 400, crop: :fill %>')">
+    <div class="specialty-name"><%= link_to favorite.name, specialty_path(favorite), class: 'card-link' %>
+    </div>
+    <i class="far fa-heart favorites" data-id="<%= favorite.id %>"></i>
+  </div>
+
+<% end %>
+
+
+<%= render 'shared/navbar' %>

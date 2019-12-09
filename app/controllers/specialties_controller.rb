@@ -16,10 +16,18 @@ before_action :set_specialty, only: [:show, :like, :unlike]
 
   def like
 #A CHANGER : IF-ELSE
+
     if current_user.favorite(@specialty)
-    render json: @specialty
-    else
+      render json: @specialty
+    else current_user.unfavorite(@specialty)
+      render json: @specialty
     end
+
+
+  end
+
+  def favorites
+    @favorites = current_user.all_favorited
   end
 
   private
