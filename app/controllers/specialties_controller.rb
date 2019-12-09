@@ -1,5 +1,5 @@
 class SpecialtiesController < ApplicationController
-before_action :set_specialty, only: [:show, :like, :unlike, :game]
+before_action :set_specialty, only: [:show, :like, :unlike]
 
   def index
     if params["search"]
@@ -28,10 +28,6 @@ before_action :set_specialty, only: [:show, :like, :unlike, :game]
 
   def favorites
     @favorites = current_user.all_favorited
-  end
-
-  def game
-    @game = @specialty.game
   end
 
   private

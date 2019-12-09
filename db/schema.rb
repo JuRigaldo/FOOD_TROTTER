@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_09_110205) do
+ActiveRecord::Schema.define(version: 2019_12_09_143712) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,15 @@ ActiveRecord::Schema.define(version: 2019_12_09_110205) do
     t.index ["favoritor_id", "favoritor_type"], name: "fk_favorites"
     t.index ["favoritor_type", "favoritor_id"], name: "index_favorites_on_favoritor_type_and_favoritor_id"
     t.index ["scope"], name: "index_favorites_on_scope"
+  end
+
+  create_table "games", force: :cascade do |t|
+    t.bigint "specialty_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["specialty_id"], name: "index_games_on_specialty_id"
+    t.index ["user_id"], name: "index_games_on_user_id"
   end
 
   create_table "restaurants", force: :cascade do |t|
@@ -55,7 +64,7 @@ ActiveRecord::Schema.define(version: 2019_12_09_110205) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "photo"
-    t.integer "game"
+    t.integer "point"
   end
 
   create_table "specialty_restaurants", force: :cascade do |t|
@@ -107,6 +116,8 @@ ActiveRecord::Schema.define(version: 2019_12_09_110205) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "games", "specialties"
+  add_foreign_key "games", "users"
   add_foreign_key "specialty_restaurants", "restaurants"
   add_foreign_key "specialty_restaurants", "specialties"
   add_foreign_key "taggings", "tags"

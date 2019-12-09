@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :specialties, only: [:index, :show] do
 
 
-   
+
 
     collection do
       get 'favorites', to: "specialties#favorites"
@@ -13,7 +13,6 @@ Rails.application.routes.draw do
 
         member do
           get 'like', to: "specialties#like"
-          get 'game'
         end
 
 
@@ -26,5 +25,6 @@ Rails.application.routes.draw do
 
   get '/tagged', to: "restaurants#tagged", as: :tagged
 
+  resources :games, only: [:index]
 
 end
