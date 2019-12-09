@@ -1,8 +1,39 @@
+<%= render 'shared/navbar' %>
+
+
+<div class="localisation">
+    <%= link_to specialties_path do %>
+      <i class="fas fa-arrow-left float-left" style="margin-top: 5px"></i>
+    <% end %>
+    Mes Food Winnings
+  </div>
+
+<div class="container">
+
+
+
+  <%= render 'shared/avatar'  %>
+  <button type="button" class="btn btn-success" style="border-radius: 10px; color: white; background-color: #1BA67F">Partager</button>
+
+  <%= @games.sum{ |game| game.specialty.point } %> points
+
 <% @games.each do |game| %>
+ <div class="card-game" style="background-image: url('<%=cl_image_path game.specialty.photo, height: 150, width: 100, crop: :fill  %>">
+
+    </div>
+<%= game.specialty.name %>
+<%= game.specialty.country %>
+<%= game.specialty.region %>
+<%= game.specialty.city %>
 
 
-     <%= game.specialty.point %>
+     <%=game.specialty.point %> points
 
 
 
   <% end %>
+
+
+
+
+  </div>
