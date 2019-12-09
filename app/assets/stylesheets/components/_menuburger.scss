@@ -31,7 +31,7 @@ $b-txt-pad: 30px; //Left padding on both brand and links
 $b-line-height: ($b-height / 2 - ($b-font-size / 2.8)); //Vertically centers brand to menu
 $b-txt-pad-top: ($b-margin-top + $b-height + $b-txt-pad); //Top margin for first link element
 $b-bun-width-half: ($b-bun-width / 2); //Half bun width used for calculation
-$b-pad-left: 38px; //Horizontally centers bun in menu
+$b-pad-left: 31px; //Horizontally centers bun in menu
 $b-pad-top: 53px; //Vertically centers bun in menu
 
 @keyframes slideInLeft {
@@ -70,7 +70,7 @@ body {
   &.open:after {
     background: color(primary);
     content: '';
-    height: 100%;
+    height: 109%;
     right: 0;
     opacity: 0;
     overflow: auto;
@@ -95,7 +95,7 @@ body {
 
   &.open {
     visibility: visible;
-    width: 100%;
+    width: 88%;
     height: 100%;
   }
 }
@@ -178,7 +178,7 @@ body {
     .b-bun--top {
       top: 9px;
       transform: rotate(45deg);
-      background-color: $mint;
+      background-color: $sugar;
     }
 
     .b-bun--mid {
@@ -188,7 +188,7 @@ body {
     .b-bun--bottom {
       top: 5px;
       transform: rotate(-45deg);
-      background-color: $mint;
+      background-color: $sugar;
     }
   }
 }
