@@ -4,15 +4,24 @@
 
 .search-form-control .btn {
   position: absolute;
-  top: 8px;
-  bottom: 8px;
-  right: 8px;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  background-color: $mint;
 }
 
 .search-form-control .form-control {
-  height: 3.5rem;
+  height: 2rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  border: 1px solid $oyster;
+  border: 1px solid #d8d8d8;
+  background-color: #d8d8d8;
+  margin-top: 8%;
+  font-size: 18px;
+  font-family: $roboto;
+}
+
+.form-control::placeholder {
+  color: $oyster;
 }
 
 .search-form-control .form-control:focus {
@@ -22,9 +31,15 @@
 }
 
 .search-design {
-  width: 80%;
+  width: 95%;
+  margin-left: -7%;
 }
 
 .btn {
-  color: $mint;
+  color: $sugar;
 }
+
+.btn-flat {
+  display: flex;
+}
+

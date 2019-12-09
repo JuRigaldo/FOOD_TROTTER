@@ -3,4 +3,41 @@
 
 .liked {
   color: $tagada;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+
+}
+
+h1 {
+  font-family: $roboto;
+  font-size: 18px;
+  display: flex;
+  color: $mint;
+  margin-top: 10%;
+  margin-left: 3px;
+  font-weight: bold;
+}
+
+.grey-title {
+  color: $oyster;
+}
+
+.black-title {
+  color: black;
+}
+
+.margin {
+  margin: 10px 8px 45px 8px;
+}
+
+.streamer {
+  margin-top: -10px;
+  display: flex;
+  justify-content: center;
+}
+
+.une {
+  font-family: $indie;
+  font-size: 24px;
+  margin-left: -6px;
 }
