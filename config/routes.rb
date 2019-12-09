@@ -4,10 +4,18 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :specialties, only: [:index, :show] do
 
+
+   
+
+    collection do
+      get 'favorites', to: "specialties#favorites"
+    end
+
         member do
           get 'like', to: "specialties#like"
           get 'game'
         end
+
 
 
     get "/restaurants", to: "restaurants#index"
