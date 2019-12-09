@@ -1,9 +1,33 @@
-<div
-  id="map"
-  style="width: 100%;
-  height: 600px;"
-  data-markers="<%= @markers.to_json %>"
-  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-></div>
-
-
+<%= render 'shared/navbar' %>
+<div class="container">
+  <div class="imageup">
+    <div class="card-restaurant-image" style="background-image: url('<%=cl_image_path @restaurant.photo, height: 300, width: 100, crop: :fill  %>')">
+      <i class="far fa-heart favorites" data-id="<%= @restaurant.id %>"></i>
+    </div>
+  </div>
+  <div class="restaurant-description">
+    <div class="titlerestaurant">
+      <h3> <%= @restaurant.name %> </h3>
+    </div>
+    <div class="recommendation">
+      <p class="food-trotter"> <%=@restaurant.recommendation %></p>
+      <p class="food-trotters">food trotteurs l'ont recommandé !</p>
+    </div>
+    <div>
+      <p class="subtitle">Informations sur le restaurant</p>
+      <p><em>Téléphone :</em> <%= @restaurant.phone_number%></p>
+      <p><em>Adresse :</em> <%= @restaurant.address %></p>
+      <p><em>Horaires :</em> <%= @restaurant.opening_time %></p>
+    </div>
+    <div
+      id="map"
+      style="width: 100%;
+      height: 200px;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+    ></div>
+    <div class="d-flex justify-content-center" >
+    <button type="button-go mx-auto" class="btn btn-primary btn-lg btn-block active">Go !</button>
+    </div>
+  </div>
+</div>
