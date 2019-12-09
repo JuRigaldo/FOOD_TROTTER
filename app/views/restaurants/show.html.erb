@@ -1,3 +1,4 @@
+
 <%= render 'shared/navbar' %>
 <div class="container">
   <div class="imageup">
@@ -19,6 +20,13 @@
       <p><em>Adresse :</em> <%= @restaurant.address %></p>
       <p><em>Horaires :</em> <%= @restaurant.opening_time %></p>
     </div>
+    <div class="map-design">
+  <div class="localisation">
+    <%= link_to specialties_path do %>
+      <i class="fas fa-arrow-left float-left" style="margin-top: 5px"></i>
+    <% end %>
+    Localisation
+  </div>
     <div
       id="map"
       style="width: 100%;
@@ -26,8 +34,12 @@
       data-markers="<%= @markers.to_json %>"
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
     ></div>
+     </div>
     <div class="d-flex justify-content-center" >
     <button type="button-go mx-auto" class="btn btn-primary btn-lg btn-block active">Go !</button>
     </div>
   </div>
 </div>
+
+
+  
