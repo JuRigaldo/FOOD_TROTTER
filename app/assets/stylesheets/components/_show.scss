@@ -1,0 +1,62 @@
+.description {
+  justify-content: center;
+  position: relative;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 20px;
+}
+
+.card {
+  background-size: cover;
+  background-position: center;
+  height: 140px;
+  display: flex;
+  justify-content: left;
+  align-items: flex-end;
+  color: $sugar;
+  font-size: 12px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 5px -8px;
+  position: relative;
+  text-decoration: none;
+}
+
+.food {
+  padding-top: 37px;
+
+}
+
+.title {
+  padding-left: 15px;
+  padding-top: 12px;
+}
+
+
+.boite {
+  display: grid;
+  grid-template-columns: 1fr 143px;
+  grid-gap: 5px 30px;
+  margin-right: 3%;
+  margin-left: 5%;
+}
+
+
+.iconm {
+  font-size: 22px;
+  color: $mint;
+}
+
+.media {
+   padding-top: 20px;
+}
+
+
+
+
+
+
+
+
