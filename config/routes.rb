@@ -6,8 +6,9 @@ Rails.application.routes.draw do
 
         member do
           get 'like', to: "specialties#like"
+          get 'game'
         end
-    
+
 
     get "/restaurants", to: "restaurants#index"
 

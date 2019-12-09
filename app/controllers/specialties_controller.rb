@@ -1,5 +1,5 @@
 class SpecialtiesController < ApplicationController
-before_action :set_specialty, only: [:show, :like, :unlike]
+before_action :set_specialty, only: [:show, :like, :unlike, :game]
 
   def index
     if params["search"]
@@ -20,6 +20,10 @@ before_action :set_specialty, only: [:show, :like, :unlike]
     render json: @specialty
     else
     end
+  end
+
+  def game
+    @game = @specialty.game
   end
 
   private
