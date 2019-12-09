@@ -99,10 +99,25 @@ rikuro = Specialty.new(name: "Rikuro's cheesecake", description: "Il s'agit d'un
 rikuro.remote_photo_url = url
 rikuro.save
 
+url = 'https://res.cloudinary.com/geraldinefd/image/upload/v1575722253/ajinoya.jpg'
 ajinoya = Restaurant.create!(name: "Ajinoya", address: "1-7-16 Nambo, Chuo-ku, Osaka 542-0076", phone_number: "+ 81 6-6211-0713", recommendation: 245, opening_time: '12h00 à 22h00')
-okaru = Restaurant.create!(name: "Okaru" , address: "1 Chome-9-19 Sennichimae, Chuo Ward, Osaka, 542-0074", phone_number: "+81 6-6211-0985", recommendation: 198, opening_time: '12h00-14h30 17h00-22h00')
-chibo = Restaurant.create!(name: "Chibo Dotonburi", address: "1-5-5 Dotonbori, Chuo-ku, Osaka", phone_number: "+81 6-6212-2211", recommendation: 174, opening_time: '11h00 à 01h00')
+ajinoya.remote_photo_url = url
+ajinoya.save
 
-specialty_resto1 = SpecialtyRestaurant.new(restaurant: ajinoya, specialty: takoyaki)
+url = 'https://res.cloudinary.com/geraldinefd/image/upload/v1575722311/okaru.jpg'
+okaru = Restaurant.new(name: "Okaru" , address: "1 Chome-9-19 Sennichimae, Chuo Ward, Osaka, 542-0074", phone_number: "+81 6-6211-0985", recommendation: 198, opening_time: '12h00-14h30 17h00-22h00')
+okaru.remote_photo_url = url
+okaru.save
+
+url = 'https://res.cloudinary.com/geraldinefd/image/upload/v1575722356/chibo.jpg'
+chibo = Restaurant.new(name: "Chibo Dotonburi", address: "1-5-5 Dotonbori, Chuo-ku, Osaka", phone_number: "+81 6-6212-2211", recommendation: 174, opening_time: '11h00 à 01h00')
+chibo.remote_photo_url = url
+chibo.save
+
+specialty_resto1 = SpecialtyRestaurant.new(restaurant: ajinoya, specialty: okonomiyaki)
 specialty_resto1.save
+specialty_resto2 = SpecialtyRestaurant.new(restaurant: okaru, specialty: okonomiyaki)
+specialty_resto2.save
+specialty_resto3 = SpecialtyRestaurant.new(restaurant: chibo, specialty: okonomiyaki)
+specialty_resto3.save
 puts '...finished'
