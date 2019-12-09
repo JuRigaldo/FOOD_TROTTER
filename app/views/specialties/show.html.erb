@@ -1,7 +1,37 @@
-<h2> <%= @specialty.name%></h2>
-<div><%= cl_image_tag @specialty.photo, height: 300, width: 400, crop: :fill %>
-<a href="#"><i class="far fa-heart favorites"></i></a>
+<div class='title'>
+  <h2><%= @specialty.name%></h2>
 </div>
-<p><strong>Description: </strong><%= @specialty.description %></p>
-<%= link_to @specialty.name, specialty_restaurants_path(@specialty) %>
+
+
+<div class="container">
+  <div class="box boite">
+    <div class="card-category card" style="background-image: url('<%= cl_image_path @specialty.photo, height: 300, width: 400, crop: :fill %>')">
+      <div class="specialty-name">
+      </div>
+      <i class="far fa-heart favorites" data-id="<%= @specialty.id %>"></i>
+    </div>
+    <div class="btn food">
+      <%= link_to specialty_restaurants_path(@specialty) do %>
+        <button type="button" class="btn btn-success" style="border-radius: 10px; color: white; background-color: #1BA67F">Food trotter</button>
+      <% end %>
+      <div class="media">
+        <div class="col-6">
+           <i class="fas fa-utensils iconm"></i>
+        </div>
+
+        <div class="col-6">
+          <i class="fas fa-share iconm"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- <button type="button" class="btn btn-success">Success</button> -->
+
+<div class="description">
+<%= @specialty.description %></p>
+</div>
+
+
+
 <%= render 'shared/navbar' %>

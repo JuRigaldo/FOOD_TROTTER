@@ -27,6 +27,8 @@
 
 .specialty-name {
   margin-left: 8px;
+  font-family: $roboto;
+  font-size: 16px;
 }
 
 .specialty-name a {
@@ -39,4 +41,12 @@
   position: absolute;
   right: 8px;
   top: 8px;
+}
+
+.card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0px;
+  width: 100%;
+  padding-top: 115px;
 }
