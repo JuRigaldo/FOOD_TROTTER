@@ -1,9 +1,15 @@
-<div class='title'>
+<div class="localisationsh">
+  <%= link_to specialties_path do %>
+  <i class="fas fa-arrow-left float-left" style="margin-top: 5px"></i>
+<% end %>
+</div>
+ <div class="container">
+  <div class="boxshowspecialty">
+  <div class='title'>
   <h2><%= @specialty.name%></h2>
 </div>
-<div class="container">
   <div class="box boite">
-    <div class="card-category card" style="background-image: url('<%= cl_image_path @specialty.photo, height: 300, width: 400, crop: :fill %>')">
+    <div class="cardcategorycard" style="background-image: url('<%= cl_image_path @specialty.photo, height: 300, width: 400, crop: :fit %>')">
       <div class="specialty-name">
       </div>
       <i class="far fa-heart favorites <%= current_user.favorited?(@specialty) ? "liked" : "" %>" data-id="<%= @specialty.id %>"></i>
@@ -20,12 +26,17 @@
           <i class="fas fa-share iconm"></i>
         </div>
       </div>
-      <div class="points"><%= @specialty.point %> trott'points</div>
+      <div class="points"><span class="tagadastyle">
+        <%=@specialty.point%></span>
+        <div class="tagadastyle2">trott'points</div>
+      </div>
     </div>
   </div>
-</div>
+
 <!-- <button type="button" class="btn btn-success">Success</button> -->
 <div class="description">
-<%= @specialty.description %></p>
+<%= @specialty.description %>
+</div>
+</div>
 </div>
 <%= render 'shared/navbar' %>

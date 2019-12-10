@@ -1,27 +1,29 @@
 .description {
-  justify-content: center;
-  position: relative;
-  padding-right: 15px;
-  padding-left: 15px;
-  padding-top: 20px;
+  text-align: justify;
+  margin-top: 16px;
+  // margin-left: 8px;
+  // margin-right: 16px;
 }
 
-.card {
+.boxshowspecialty {
+  // margin-right: 8px;
+  // margin-left: 8px;
+}
+
+.cardcategorycard {
   background-size: cover;
   background-position: center;
-  height: 140px;
+  height: 120px;
   display: flex;
   justify-content: left;
-  align-items: flex-end;
+  align-items: center;
   color: $sugar;
   font-size: 12px;
-  font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  margin: 5px -8px;
+  // margin: 5px -8px;
   position: relative;
   text-decoration: none;
+  margin-top: 24px;
 }
 
 .food {
@@ -30,8 +32,9 @@
 }
 
 .title {
-  padding-left: 15px;
-  padding-top: 12px;
+  margin-top: 32px;
+  color: $mint;
+  font-weight: bold;
 }
 
 
@@ -40,7 +43,7 @@
   grid-template-columns: 1fr 143px;
   grid-gap: 5px 30px;
   margin-right: 3%;
-  margin-left: 5%;
+  // margin-left: 5%;
 }
 
 
@@ -55,6 +58,31 @@
 
 .points {
   color: $mint;
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+}
+
+.localisationsh {
+  font-family: 'Open Sans', sans-serif;
+  // background-color: $mint;
+  color: $mint;
+  text-align: center;
+  height: 50px;
+  padding: 10px;
+  letter-spacing: 2px;
+  align-items: center;
+}
+
+.tagadastyle {
+  color: $tagada;
+  font-weight: bold;
+  // display: flex;
+}
+
+.tagadastyle2 {
+  // display: flex;
+  margin-left: 4px;
 }
 
 
