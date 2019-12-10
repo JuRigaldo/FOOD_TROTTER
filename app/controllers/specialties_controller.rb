@@ -1,9 +1,11 @@
+
 class SpecialtiesController < ApplicationController
 before_action :set_specialty, only: [:show, :like, :unlike]
 
   def index
     if params["search"]
       @filter = params["search"]["categories"].concat(params["search"]["timetoeats"]).flatten.reject(&:blank?)
+
       @specialties = Specialty.all.global_search("#{@filter}")
       # @specialties = @specialties.all.tagged_with(@filter, any: true)
     elsif params[:query].present?
@@ -13,6 +15,7 @@ before_action :set_specialty, only: [:show, :like, :unlike]
       @specialties = Specialty.all
     end
   end
+
 
   def like
     if current_user.favorited?(@specialty)
