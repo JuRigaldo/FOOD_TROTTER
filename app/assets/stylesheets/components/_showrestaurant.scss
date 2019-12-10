@@ -85,4 +85,8 @@ p {
 #map {
   justify-content: center;
 }
-
+.btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #1BA67F;
+    border-color: #1BA67F;
+}

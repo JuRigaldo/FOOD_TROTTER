@@ -4,9 +4,6 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :specialties, only: [:index, :show] do
 
-
-
-
     collection do
       get 'favorites', to: "specialties#favorites"
     end
@@ -15,13 +12,12 @@ Rails.application.routes.draw do
           get 'like', to: "specialties#like"
         end
 
-
-
     get "/restaurants", to: "restaurants#index"
 
   end
 
   resources :restaurants, only: [:show] do
+    get 'map', to: 'restaurants#map'
     member do
       get 'like', to: "restaurants#like"
     end

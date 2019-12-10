@@ -25,9 +25,9 @@
     </div>
     <div class="map-design">
   <div class="localisation">
-    <%= link_to specialties_path do %>
+<!--     <%= link_to specialties_path do %>
       <i class="fas fa-arrow-left float-left" style="margin-top: 5px"></i>
-    <% end %>
+    <% end %> -->
     Localisation
   </div>
     <div
@@ -39,7 +39,9 @@
     ></div>
      </div>
     <div class="d-flex justify-content-center" >
-    <button type="button-go mx-auto" class="btn-go btn-primary btn-lg btn-block active">Go !</button>
+    <%= link_to restaurant_map_path(@restaurant) do %>
+      <button type="button-go mx-auto" class="btn-go btn-primary btn-lg btn-block active">Go !</button>
+    <% end %>
     </div>
   </div>
 </div>
