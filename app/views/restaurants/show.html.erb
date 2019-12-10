@@ -4,7 +4,7 @@
 
   <div class="imageup">
     <div class="card-restaurant-image" style="background-image: url('<%=cl_image_path @restaurant.photo, height: 300, width: 100, crop: :fill  %>')">
-      <i class="far fa-heart favorites <%= current_user.favorited?(@restaurant) ? "liked" : "" %>" data-id="<%= @restaurant.id %>"></i>
+      <i class="far fa-heart favorites2 <%= current_user.favorited?(@restaurant) ? "liked" : "" %>" data-id="<%= @restaurant.id %>"></i>
     </div>
   </div>
 
@@ -25,6 +25,7 @@
     </div>
     <div class="map-design">
   <div class="localisation">
+
     Localisation
   </div>
     <div
@@ -36,7 +37,9 @@
     ></div>
      </div>
     <div class="d-flex justify-content-center" >
-    <button type="button-go mx-auto" class="btn-go btn-primary btn-lg btn-block active">Go !</button>
+    <%= link_to restaurant_map_path(@restaurant) do %>
+      <button type="button-go mx-auto" class="btn-go btn-primary btn-lg btn-block active">Go !</button>
+    <% end %>
     </div>
   </div>
 </div>

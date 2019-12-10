@@ -1,4 +1,3 @@
-
 <%= render 'shared/navbar' %>
 <div class="container">
   <div class="boxup">
@@ -9,23 +8,21 @@
       <h4><%= @specialty.name.upcase %></h4>
     </div>
   </div>
-
   <% @specialty_restaurants.each do |specialty_restaurant| %>
   <div class="line">
-  <div class="bottom">
-    <div class="card-restaurant" style="background-image: url('<%=cl_image_path specialty_restaurant.restaurant.photo, height: 150, width: 100, crop: :fill  %>">
-      <i class="far fa-heart favorites" data-id="<%= specialty_restaurant.restaurant.id %>"></i>
-    </div>
-    <div class="info-resto">
-    <h4 class="restaurant-title"> <%= link_to specialty_restaurant.restaurant.name, restaurant_path(specialty_restaurant.restaurant.id) %></h4>
-    <div class="recommendation">
-    <p class="food-trotter"><%=specialty_restaurant.restaurant.recommendation %></p>
-    <p class="food-trotters">food trotteurs</p>
-    </div>
+    <div class="bottom">
+      <div class="card-restaurant" style="background-image: url('<%=cl_image_path specialty_restaurant.restaurant.photo, height: 150, width: 100, crop: :fill  %>">
+        <i class="far fa-heart favorites" data-id="<%= specialty_restaurant.restaurant.id %>"></i>
+      </div>
+      <div class="info-resto">
+        <h4 class="restaurant-title"> <%= link_to specialty_restaurant.restaurant.name, restaurant_path(specialty_restaurant.restaurant.id) %></h4>
+        <div class="recommendation">
+          <p class="food-trotter"><%=specialty_restaurant.restaurant.recommendation %></p>
+          <p class="food-trotters">food trotteurs</p>
+        </div>
+      </div>
     </div>
   </div>
-    </div>
   <% end %>
-
 </div>
 </div>

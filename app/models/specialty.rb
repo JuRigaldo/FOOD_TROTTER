@@ -10,6 +10,7 @@ class Specialty < ApplicationRecord
   acts_as_taggable_on :categories, :timetoeats
   # acts_as_favoritor
   acts_as_favoritable
+  # favoritable_type :specialty
 
 
   include PgSearch::Model

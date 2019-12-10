@@ -41,6 +41,14 @@
   top: 8px;
 }
 
+.favorites2 {
+  color: $sugar;
+  font-size: 20px;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+}
+
 .restaurant-description {
   padding: 16px;
 }
@@ -92,4 +100,8 @@ p {
 #map {
   justify-content: center;
 }
-
+.btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #1BA67F;
+    border-color: #1BA67F;
+}

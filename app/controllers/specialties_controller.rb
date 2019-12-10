@@ -26,7 +26,8 @@ before_action :set_specialty, only: [:show, :like, :unlike]
   end
 
   def favorites
-    @favorites = current_user.all_favorited
+    @favorites_spe = current_user.favorited_by_type('Specialty')
+    @favorites_rest = current_user.favorited_by_type('Restaurant')
   end
 
   private
