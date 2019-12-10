@@ -6,6 +6,7 @@
   margin-bottom: 12px;
   margin-left: -7px;
   margin-right: 2px;
+  position: relative;
 }
 
 .big-card > img {
@@ -32,10 +33,16 @@
 }
 
 
-.big-cards .big-card-infos {
-  padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+
+.suggestion {
   position: relative;
+  background-image: url('streamer.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  bottom: -11px;
+  background-size: 56%;
+  height: 26px;
+  padding: 3px;
+
 }
