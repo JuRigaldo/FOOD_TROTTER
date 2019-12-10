@@ -24,6 +24,7 @@ class RestaurantsController < ApplicationController
   end
 
   def like
+    @restaurant = Restaurant.find(params[:id])
     if current_user.favorited?(@restaurant)
       current_user.unfavorite(@restaurant)
       result = {liked: false}
