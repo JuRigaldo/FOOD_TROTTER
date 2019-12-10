@@ -31,7 +31,7 @@ initMapbox();
 if (document.querySelector('.favorites')) {
   initFavorite();
 }
-if (document.querySelector('.favorites')) {
+if (document.querySelector('.favorites2')) {
 
 initLike();
 
