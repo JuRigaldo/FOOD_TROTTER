@@ -4,12 +4,12 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import { initMapbox } from '../plugins/init_mapbox';
 import { initFavorite } from '../plugins/favorite';
 import { initLike } from '../plugins/favorite';
-// import { menuBurger } from '../plugins/menu_burger';
+
 
 if (document.querySelector('#map')) {
 initMapbox();
 }
-'use strict';
+
 
 (function() {
   var body = document.body;
@@ -43,10 +43,7 @@ document.querySelectorAll('.card-category').forEach((card) => {
   liked.addEventListener('click', () => {
     card.style.display = 'none';
   })
-})
-
-
-// export { menuBurger };
+});
 
 
 
