@@ -102,17 +102,17 @@ rikuro.remote_photo_url = url
 rikuro.save
 
 url = 'https://res.cloudinary.com/geraldinefd/image/upload/v1575722253/ajinoya.jpg'
-ajinoya = Restaurant.create!(name: "Ajinoya", address: "1-7-16 Nambo, Chuo-ku, Osaka 542-0076", phone_number: "+ 81 6-6211-0713", recommendation: 245, opening_time: '12h00 à 22h00')
+ajinoya = Restaurant.create!(name: "Ajinoya", address: "1-7-16 Nambo, Chuo-ku, Osaka 542-0076", phone_number: "+ 81 6-6211-0713", recommendation: 245, opening_time: '12h00 à 22h00', latitude: 34.668327, longitude: 135.500917)
 ajinoya.remote_photo_url = url
 ajinoya.save
 
 url = 'https://res.cloudinary.com/geraldinefd/image/upload/v1575722311/okaru.jpg'
-okaru = Restaurant.new(name: "Okaru" , address: "1 Chome-9-19 Sennichimae, Chuo Ward, Osaka, 542-0074", phone_number: "+81 6-6211-0985", recommendation: 198, opening_time: '12h00-14h30 17h00-22h00')
+okaru = Restaurant.new(name: "Okaru" , address: "1 Chome-9-19 Sennichimae, Chuo Ward, Osaka, 542-0074", phone_number: "+81 6-6211-0985", recommendation: 198, opening_time: '12h00-14h30 17h00-22h00', latitude: 34.667772, longitude: 135.503428)
 okaru.remote_photo_url = url
 okaru.save
 
 url = 'https://res.cloudinary.com/geraldinefd/image/upload/v1575722356/chibo.jpg'
-chibo = Restaurant.new(name: "Chibo Dotonburi", address: "1-5-5 Dotonbori, Chuo-ku, Osaka", phone_number: "+81 6-6212-2211", recommendation: 174, opening_time: '11h00 à 01h00')
+chibo = Restaurant.new(name: "Chibo Dotonburi", address: "1-5-5 Dotonbori, Chuo-ku, Osaka", phone_number: "+81 6-6212-2211", recommendation: 174, opening_time: '11h00 à 01h00', latitude: 34.669086, longitude: 135.503882)
 chibo.remote_photo_url = url
 chibo.save
 
