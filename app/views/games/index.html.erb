@@ -1,39 +1,40 @@
+
+
+
 <%= render 'shared/navbar-trophy' %>
 
 
+
 <div class="localisation">
-    <%= link_to specialties_path do %>
-      <i class="fas fa-arrow-left float-left" style="margin-top: 5px"></i>
-    <% end %>
-    Mes Food Winnings
-  </div>
-
-<div class="container">
-
-
-
-  <%= render 'shared/avatar'  %>
-  <button type="button" class="btn btn-success" style="border-radius: 10px; color: white; background-color: #1BA67F">Partager</button>
-
-  <%= @games.sum{ |game| game.specialty.point } %> points
-
-<% @games.each do |game| %>
- <div class="card-game" style="background-image: url('<%=cl_image_path game.specialty.photo, height: 150, width: 100, crop: :fill  %>">
-
-    </div>
-<%= game.specialty.name %>
-<%= game.specialty.country %>
-<%= game.specialty.region %>
-<%= game.specialty.city %>
-
-
-     <%=game.specialty.point %> points
-
-
-
+  <%= link_to specialties_path do %>
+  <i class="fas fa-arrow-left float-left" style="margin-top: 5px"></i>
   <% end %>
-
-
-
-
+  Mes Food Winnings
+</div>
+<div class="container">
+  <div class="counter-up">
+    <div class="avatar"><%= render 'shared/avatar'  %>
+    </div>
+    <div class="points">
+      <div class="counter">
+        <%= @games.sum{ |game| game.specialty.point } %> pts
+      </div>
+      <button type="button-counter" class="btn btn-success counterbutton " style="border-radius: 50px; font-weight: bold; font-size: 12px; color: white; background-color: #1BA67F">Partager</button>
+    </div>
   </div>
+  <% @games.each do |game| %>
+  <div class="game-container">
+    <div class="boxgamebottom">
+      <div class="card-game" style="background-image: url('<%=cl_image_path game.specialty.photo, crop: :fit  %>">
+      </div>
+      <div class="specialtygamedescription">
+        <p class=namespecialty><%= game.specialty.name %></p>
+        <p class="specialtytext"><%= game.specialty.country%> <%= game.specialty.region %><%= game.specialty.city %></p>
+      </div>
+    </div>
+    <div class="pointsgamedescription">
+      + <%=game.specialty.point %> pts
+    </div>
+  </div>
+  <% end %>
+</div>

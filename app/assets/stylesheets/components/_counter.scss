@@ -1,0 +1,32 @@
+.counter-up {
+display: flex;
+justify-content: space-evenly;
+height: 150px;
+align-items: center;
+padding: 56px;
+border-bottom: $oyster 1px solid;
+margin: 16px;
+}
+
+.points {
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.avatar {
+  border-color: $mint;
+}
+
+.counter {
+  font-size: 24px;
+}
+
+.boxgamebottom {
+  margin-top: 16px;
+}
+
+.boxgamebottom {
+  display: flex;
+}
+
