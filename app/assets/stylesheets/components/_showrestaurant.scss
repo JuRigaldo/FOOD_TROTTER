@@ -54,8 +54,8 @@
 }
 
 .titlerestaurant h3 {
-  text-align: right;
-  margin-bottom: 24px;
+  text-align: left;
+  margin-bottom: -8px;
   font-family: $headers-font;
 }
 
@@ -63,22 +63,29 @@
   color: $tagada;
   margin-right: 4px;
   font-weight: bold;
+  font-size: 0.7rem;
+}
+
+.food-trotters {
+  font-size: 0.7rem;
 }
 
 .recommendation {
   display: flex;
-  margin-bottom: 0px;
+  margin-bottom: 24px;
   padding-bottom: 0px;
-  padding-top: 50px;
+  padding-top: 0px;
+  margin-bottom: -4px;
 }
 
 .subtitle {
-  text-align: center;
+  text-align: left;
   font-weight: bold;
 }
 
 p {
-  line-height: 40px;
+  line-height: 36px;
+  font-size: 0.8rem;
 }
 
 .btn-go {
