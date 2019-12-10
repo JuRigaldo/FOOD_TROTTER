@@ -9,8 +9,8 @@ class RestaurantsController < ApplicationController
       {
         lat: restaurant.latitude,
         lng: restaurant.longitude,
-        infoWindow: render_to_string(partial: "info_window", locals: { restaurant: restaurant })
-        # image_url: helpers.asset_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
+        infoWindow: render_to_string(partial: "info_window", locals: { restaurant: restaurant }),
+        image_url: helpers.asset_url('fourchette.png')
       }
     end
   end
@@ -21,12 +21,20 @@ class RestaurantsController < ApplicationController
       {
         lat: @restaurant.latitude,
         lng: @restaurant.longitude,
-        infoWindow:render_to_string(partial: "info_window", locals: { restaurant: @restaurant })
+        infoWindow:render_to_string(partial: "info_window", locals: { restaurant: @restaurant }),
+        image_url: helpers.asset_url('fourchette-small.png')
     }]
   end
 
   def map
-    @restaurant = Restaurant.find(params[:restaurant_id])
+    @restaurant = Restaurant.geocoded.find(params[:restaurant_id])
+    @markers = [
+      {
+        lat: @restaurant.latitude,
+        lng: @restaurant.longitude,
+        infoWindow:render_to_string(partial: "info_window", locals: { restaurant: @restaurant }),
+        image_url: helpers.asset_url('fourchette-small.png')
+    }]
   end
 
   def like
