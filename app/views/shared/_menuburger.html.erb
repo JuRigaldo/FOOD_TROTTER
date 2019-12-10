@@ -4,7 +4,7 @@
   <%= f.input :timetoeats, label: "Time to eat", collection: $timetoeats, as: :check_boxes, :required => false, class: "invisible" %>
   <p class="kaka"><strong>Time to eat</strong></p>
   <% $timetoeats.each do |status| %>
-    <div class="custom-control custom-switch">
+    <div class="custom-control custom-switch ">
       <div class="row">
         <div class="col-10">
             <%= status %>
