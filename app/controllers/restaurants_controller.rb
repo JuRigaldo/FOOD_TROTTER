@@ -19,6 +19,10 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.find(params[:id])
   end
 
+  def map
+    @restaurant = Restaurant.find(params[:restaurant_id])
+  end
+
   def like
     if current_user.favorited?(@restaurant)
       current_user.unfavorite(@restaurant)
