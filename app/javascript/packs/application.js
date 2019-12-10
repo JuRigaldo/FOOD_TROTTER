@@ -36,6 +36,16 @@ if (document.querySelector('.favorites')) {
 initLike();
 
 }
+
+document.querySelectorAll('.card-category').forEach((card) => {
+
+  const liked = card.querySelector('.liked')
+  liked.addEventListener('click', () => {
+    card.style.display = 'none';
+  })
+})
+
+
 // export { menuBurger };
 
 
