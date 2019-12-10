@@ -70,12 +70,12 @@ body {
   &.open:after {
     background: color(primary);
     content: '';
-    height: 109%;
+    height: 100%;
     right: 0;
     opacity: 0;
     overflow: auto;
     padding: 0;
-    position: absolute;
+    position: fixed;
     top: 0;
     transition: $b-transition;
     width: 100%;
@@ -225,10 +225,16 @@ div.custom-control-right .custom-control-label::before {
     color: #fff;
     border-color: $mint;
     background-color: $mint;
+
+}
+.custom-switch .custom-control-label::before {
+transform: scale(1.2);
 }
 
 .custom-switch .custom-control-label::after {
     background-color: $mint;
+    transform: scale(1.2);
+
 }
 
 fieldset.check_boxes{
@@ -239,8 +245,11 @@ fieldset.check_boxes{
     color: $sugar !important;
     background-color: $mint;
     border-color: $mint;
+    margin-top: 15px;
 }
 .kaka {
     font-family: $body-font;
     margin: 10px;
 }
+
+
