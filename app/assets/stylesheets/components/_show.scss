@@ -1,59 +1,47 @@
-.description {
-  text-align: justify;
-  margin-top: 16px;
-  // margin-left: 8px;
-  // margin-right: 16px;
-}
-
-.boxshowspecialty {
-  // margin-right: 8px;
-  // margin-left: 8px;
+.float-left-sugar {
+  color: $sugar;
+  margin-left: 8px;
+  margin-top: 8px;
+  font-size: 20px;
 }
 
 .cardcategorycard {
   background-size: cover;
-  background-position: center;
-  height: 120px;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  color: $sugar;
-  font-size: 12px;
-  border-radius: 5px;
+  height: 220px;
+  // background-repeat: no-repeat;
+  // display: flex;
+  // justify-content: left;
+  // align-items: center;
+  // color: $sugar;
+  // font-size: 12px;
+  // border-radius: 5px;
   // margin: 5px -8px;
   position: relative;
   text-decoration: none;
-  margin-top: 24px;
+  // margin: 16px;
+  // margin-top: 24px;
+}
+
+.share-show {
+color: $sugar;
+font-size: 20px;
+position: absolute;
+right: 80px;
+top: 8px;
 }
 
 .food {
-  padding-top: 37px;
-
+display: flex;
+justify-content: center;
+margin-top: 24px;
 }
 
 .title {
-  margin-top: 32px;
+  margin-top: 24px;
   color: $mint;
   font-weight: bold;
-}
-
-
-.boite {
-  display: grid;
-  grid-template-columns: 1fr 143px;
-  grid-gap: 5px 30px;
-  margin-right: 3%;
-  // margin-left: 5%;
-}
-
-
-.iconm {
-  font-size: 22px;
-  color: $mint;
-}
-
-.media {
-   padding-top: 20px;
+  text-align: center;
+  margin-left: 16px;
 }
 
 .points {
@@ -61,17 +49,8 @@
   font-size: 14px;
   display: flex;
   flex-direction: row;
-}
-
-.localisationsh {
-  font-family: 'Open Sans', sans-serif;
-  // background-color: $mint;
-  color: $mint;
-  text-align: center;
-  height: 50px;
-  padding: 10px;
-  letter-spacing: 2px;
-  align-items: center;
+  justify-content: center;
+  margin-left: 16px;
 }
 
 .tagadastyle {
@@ -83,7 +62,67 @@
 .tagadastyle2 {
   // display: flex;
   margin-left: 4px;
+  color: $mint;
 }
+
+.description {
+  text-align: justify;
+  margin-top: 20px;
+  margin-right: 16px;
+  margin-left: 16px;
+}
+
+.forkandknife {
+  color: $sugar;
+  font-size: 20px;
+  position: absolute;
+  right: 46px;
+  top: 8px;
+}
+
+// .boxshowspecialty {
+//   // margin-right: 8px;
+//   // margin-left: 8px;
+// }
+
+
+// // .food {
+// //   padding-top: 37px;
+
+// }
+
+// .boite {
+//   // display: grid;
+//   // // grid-template-columns: 1fr 143px;
+//   // grid-gap: 5px 30px;
+//   // margin-right: 3%;
+//   // // margin-left: 5%;
+// }
+
+
+// .iconm {
+//   font-size: 22px;
+//   color: $mint;
+// }
+
+// .media {
+//    padding-top: 20px;
+// }
+
+
+
+// .localisationsh {
+//   font-family: 'Open Sans', sans-serif;
+//   // background-color: $mint;
+//   color: $mint;
+//   text-align: center;
+//   height: 50px;
+//   padding: 10px;
+//   letter-spacing: 2px;
+//   align-items: center;
+// }
+
+
 
 
 
