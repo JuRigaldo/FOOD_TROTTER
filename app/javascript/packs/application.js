@@ -37,7 +37,7 @@ initLike();
 
 }
 
-document.querySelectorAll('.card-category').forEach((card) => {
+document.querySelectorAll('.card-category1').forEach((card) => {
 
   const liked = card.querySelector('.liked')
   liked.addEventListener('click', () => {
