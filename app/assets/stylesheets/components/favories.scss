@@ -1,0 +1,74 @@
+.mes-favoris {
+  font-family: 'Open Sans', sans-serif;
+  background-color: $mint;
+  color: $sugar;
+  text-align: center;
+  height: 50px;
+  padding: 10px;
+  letter-spacing: 2px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.card-linkz {
+
+}
+
+.mes-favoris a {
+  color: $sugar;
+}
+
+#myTab {
+  justify-content: space-around;
+
+}
+
+.nav-item {
+  margin-bottom: 1px;
+}
+
+.nav-tabs {
+  border-bottom: none;
+}
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+  border-color: none;
+  border: none;
+  color: $mint;
+  background-color: white;
+  border-bottom: 3px solid $mint;
+  padding-bottom: 0px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.nav-tabs .nav-link {
+  border: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  letter-spacing: 1px;
+}
+
+element.style {
+    background-image: url(http://res.cloudinary.com/geraldinefd/image/upload/c_fill,h_300,w_400/v1576054440/vi0ar0nlegfpoki1lqcz.jpg);
+}
+.card-category1 {
+    background-size: cover;
+    background-position: center;
+    height: 140px;
+    display: -webkit-box;
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin: 5px -8px;
+    position: relative;
+    text-decoration: none;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
