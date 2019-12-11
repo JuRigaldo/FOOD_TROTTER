@@ -1,8 +1,8 @@
 .card-game {
   background-size: cover;
   background-position: center;
-  height: 100px;
-  min-width: 140px;
+  height: 80px;
+  min-width: 100px;
   margin-right: 10px;
   border-radius: 3px;
   }
@@ -21,7 +21,7 @@ justify-content: flex-start;
 }
 
 .specialtygamedescription {
-  display: flex;
+display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: left;
@@ -29,7 +29,7 @@ align-items: left;
 }
 
 .namespecialty {
-  font-size: 18px;
+  font-size: 16px;
   color: $mint;
   margin-bottom: 0px;
   font-family: $headers-font;
