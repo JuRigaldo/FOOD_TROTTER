@@ -15,9 +15,12 @@
 }
 
 .card-restaurant-image {
-  background-size: cover;
+  // background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
   height: 180px;
+  width: 100%;
+  background-position-y: -172px;
   display: flex;
   justify-content: left;
   align-items: flex-end;
