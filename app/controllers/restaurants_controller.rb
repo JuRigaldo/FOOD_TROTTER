@@ -22,7 +22,7 @@ class RestaurantsController < ApplicationController
         lat: @restaurant.latitude,
         lng: @restaurant.longitude,
         infoWindow:render_to_string(partial: "info_window", locals: { restaurant: @restaurant }),
-        image_url: helpers.asset_url('fourchette-small.png')
+        image_url: helpers.asset_url('fourchette.png')
     }]
   end
 
@@ -33,7 +33,7 @@ class RestaurantsController < ApplicationController
         lat: @restaurant.latitude,
         lng: @restaurant.longitude,
         infoWindow:render_to_string(partial: "info_window", locals: { restaurant: @restaurant }),
-        image_url: helpers.asset_url('fourchette-small.png')
+        image_url: helpers.asset_url('fourchette.png')
     }]
   end
 

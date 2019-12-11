@@ -93,8 +93,9 @@ p {
   color: $sugar;
   text-decoration: none;
   border-radius: 45px;
-  width: 300px;
-  // display: flex;
+  width: 250px;
+  height: 40px;
+  display: flex;
 }
 
 #map {
@@ -104,4 +105,8 @@ p {
     color: #fff;
     background-color: #1BA67F;
     border-color: #1BA67F;
+}
+
+.margingtotal2 {
+  margin-bottom: 80px;
 }

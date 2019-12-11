@@ -1,7 +1,7 @@
 
 <%= render 'shared/navbar' %>
 
-
+<div class="margingtotal2">
   <div class="imageup">
     <div class="card-restaurant-image" style="background-image: url('<%=cl_image_path @restaurant.photo, height: 300, width: 100, crop: :fill  %>')">
       <i class="far fa-heart favorites2 <%= current_user.favorited?(@restaurant) ? "liked" : "" %>" data-id="<%= @restaurant.id %>"></i>
@@ -24,10 +24,7 @@
       <p><em><i class="far fa-clock icon-mint">&nbsp &nbsp</i></em> <%= @restaurant.opening_time %></p>
     </div>
     <div class="map-design">
-  <div class="localisation">
 
-    Localisation
-  </div>
     <div
       id="map"
       style="width: 100%;
@@ -43,5 +40,5 @@
     </div>
   </div>
 </div>
-
+</div>
 

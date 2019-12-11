@@ -20,7 +20,8 @@ timetoeats = ["Petit-déjeuner", "Déjeuner/ Dîner", "Goûter", "Boire"]
 
 url = 'https://res.cloudinary.com/geraldinefd/image/upload/v1575540381/okonomiyaki.jpg'
 okonomiyaki = Specialty.new(name: 'Okonomiyaki', description: "Du japonais okonomi qui signifie 'ce que vous voulez', c'est 'ZE' plat star à Osaka !
-Ce plat contient du chou, de la viande (du porc en général) ou du poisson réunis dans une pâte qui s'apparente un peu à notre pâte à crêpe. Tout ce petit monde va venir cuire ensuite sur une plaque chauffante. Sachez que dans la plupart des restaurants, il est possible que vous mettiez la main à la pâte (muahaha) en la cuisant vous-même !", country: 'Japon', city: "Osaka", category_list: "Oeuf, Poisson, Viande", timetoeat_list: "Déjeuner/ Dîner", point: 100 )
+Il contient du chou, de la viande (du porc en général) ou du poisson réunis dans une pâte qui s'apparente un peu à notre pâte à crêpe. Tout ce petit monde va venir cuire ensuite sur une plaque chauffante.
+Sachez que dans la plupart des restaurants, il est possible que vous mettiez la main à la pâte (muahaha) en la cuisant vous-même !", country: 'Japon', city: "Osaka", category_list: "Oeuf, Poisson, Viande", timetoeat_list: "Déjeuner/ Dîner", point: 100 )
 okonomiyaki.remote_photo_url = url
 okonomiyaki.save
 
