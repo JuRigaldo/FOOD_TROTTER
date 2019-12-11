@@ -19,7 +19,6 @@ const initFavorite = () => {
 export { initFavorite };
 const initLike = () => {
   $('.favorites2').click((e) => {
-    console.log("coucou")
     Rails.ajax({
       type: "GET",
       url: "/restaurants/" + $(e.target).data("id") + "/like",
