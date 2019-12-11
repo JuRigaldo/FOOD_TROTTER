@@ -3,17 +3,19 @@
     <strong><h1>Lieu actuel &nbsp;<div class="black-title">|</div><div class="grey-title">&nbsp;OSAKA, Japon </div></h1></strong>
     <%= render 'shared/search' %>
     <%= render 'shared/menuburger' %>
+		<%= link_to specialty_path(Specialty.first.id) do %>
     <div class="big-card">
-      <img src="https://res.cloudinary.com/geraldinefd/image/upload/v1575819172/Kitsune-Udon-w600_rfwl89.jpg" />
+		<%= cl_image_tag(Specialty.first.photo) %>
       <h2 class="suggestion" >Suggestion</h2>
       <div class="big-card-infos">
         <div class= "streamer">
         </div>
         <div>
-          <p>Kitsune Udon</p>
+          <p>Okonomiyaki</p>
         </div>
       </div>
     </div>
+		<% end %>
     <div class="une">À la une... </div>
     <div class="box">
       <% @specialties.each do |specialty| %>
