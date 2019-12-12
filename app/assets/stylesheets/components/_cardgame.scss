@@ -148,8 +148,15 @@ margin:10px 12px 5px 12px;
   font-weight: bold;
 }
 
+#shiva3 {
+  font-size: 12px;
+  width: 80px;
+  color:$sugar;
+  font-weight: bold;
+}
+
 .buttongames {
-  margin-left: 35px;
+  margin-left: 30px;
 }
 
 .pointsgame {
@@ -158,6 +165,22 @@ margin:10px 12px 5px 12px;
   padding: 12px;
 }
 
+.pointsgame1 {
+  border-bottom: 1px solid;
+  border-color: $oyster;
+  padding: 12px;
+  background-color: $mint;
+  opacity: 0.85;
+}
+
 .btn-info {
   color: $sugar;
+}
+
+.prenoms1 {
+color: white;
+}
+
+.margingame {
+  margin-bottom: 150px;
 }
