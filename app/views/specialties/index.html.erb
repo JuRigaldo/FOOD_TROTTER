@@ -3,7 +3,7 @@
     <strong><h1>Lieu actuel &nbsp;<div class="black-title">|</div><div class="grey-title">&nbsp;OSAKA, Japon </div></h1></strong>
     <%= render 'shared/search' %>
     <%= render 'shared/menuburger' %>
-		<%= link_to specialty_path(Specialty.first.id) do %>
+		<%= link_to specialty_path(Specialty.first.id), class:"a-big-card" do %>
     <div class="big-card">
 		<%= cl_image_tag(Specialty.first.photo) %>
       <h2 class="suggestion" >Suggestion</h2>
