@@ -1,5 +1,5 @@
 meta_product_name: "Food trotter"
 meta_title: "Food trotter - Eating IS visiting !"
 meta_description: "Grâce à Food trotter, découvrez de nouveaux pays à travers leurs spécialités locales."
-meta_image: "cover.png" # should exist in `app/assets/images/`
+meta_image: "favicon-32x32.png" # should exist in `app/assets/images/`
 
