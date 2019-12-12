@@ -92,7 +92,7 @@ p {
 }
 
 .btn-go {
-  margin-top: 32px;
+  margin-top: 25px;
   color: $sugar;
   text-decoration: none;
   border-radius: 45px;
@@ -103,9 +103,10 @@ p {
   justify-content: center;
 }
 .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
-    color: #fff;
-    background-color: #1BA67F;
-    border-color: #1BA67F;
+  color: #fff;
+  background-color: #1BA67F;
+  border-color: #1BA67F;
+  margin-bottom: 60px;
 }
 
 
