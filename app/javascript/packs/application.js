@@ -16,6 +16,7 @@ initMapbox();
   var body = document.body;
   var burgerMenu = document.getElementsByClassName('b-menu')[0];
   var containerHome = document.getElementsByClassName('container')[1];
+  var boxHome = document.getElementsByClassName('box')[0];
   var burgerContain = document.getElementsByClassName('b-container')[0];
   var burgerNav = document.getElementsByClassName('b-nav')[0];
   if (burgerMenu) {
@@ -23,6 +24,7 @@ initMapbox();
     [body, burgerContain, burgerNav].forEach(function (el) {
       el.classList.toggle('open');
       containerHome.style.display = containerHome.style.display === 'none' ? '' : 'none';
+      boxHome.style.display = boxHome.style.display === 'none' ? '' : 'none';
 
     });
   }, false);

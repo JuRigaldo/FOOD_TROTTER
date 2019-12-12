@@ -1,18 +1,34 @@
 <%= render 'shared/navbar' %>
-<div class="container">
-  <div class="boxup">
-    <div class="card-product-image" style="background-image: url('<%=cl_image_path @specialty.photo, height: 300, width: 400, crop: :fill %>')">
+
+<div class="av-spe">
+  <%= link_to specialty_path(@specialty) do %>
+    <i class="fas fa-arrow-left float-left-sugar" ></i>
+    <div class="avatar-spe">
+      <%= render 'shared/avatar-spe'%>
+      <div class="specialty-title"><%= @specialty.name.upcase %></div>
+    </div>
+  <% end %>
+</div>
+
+<!--     <div class="boxup">
+      <%= link_to specialty_path(@specialty) do %>
+        <i class="fas fa-arrow-left float-left" style="margin-top: 5px, margin-bottom: 300px"></i>
+      <% end %>
       <i class="far fa-heart favorites <%= current_user.favorited?(@specialty) ? "liked" : "" %>" data-id="<%= @specialty.id %>"></i>
+      <div style="display: flex; justify-content: space-between;">
+        <div class="avatar" style="margin-left: 20px"><%= render 'shared/avatar-spe'  %></div>
+        <div class="specialty-title">
+          <h4><%= @specialty.name.upcase %></h4>
+        </div>
+      </div>
     </div>
-    <div class="specialty-title">
-      <h4><%= @specialty.name.upcase %></h4>
-    </div>
-  </div>
+    </div> -->
+
+<div class="container">
   <% @specialty_restaurants.each do |specialty_restaurant| %>
   <div class="line">
     <div class="bottom">
       <div class="card-restaurant" style="background-image: url('<%=cl_image_path specialty_restaurant.restaurant.photo, height: 150, width: 100, crop: :fill  %>">
-        <i class="far fa-heart favorites" data-id="<%= specialty_restaurant.restaurant.id %>"></i>
       </div>
       <div class="info-resto">
         <h4 class="restaurant-title"> <%= link_to specialty_restaurant.restaurant.name, restaurant_path(specialty_restaurant.restaurant.id) %></h4>

@@ -113,7 +113,7 @@ okaru.remote_photo_url = url
 okaru.save
 
 url = 'https://res.cloudinary.com/geraldinefd/image/upload/v1575722356/chibo.jpg'
-chibo = Restaurant.new(name: "Chibo Dotonburi", address: "1-5-5 Dotonbori, Chuo-ku, Osaka", phone_number: "+81 6-6212-2211", recommendation: 174, opening_time: '11h00 à 01h00', latitude: 34.669086, longitude: 135.503882)
+chibo = Restaurant.new(name: "Chibo", address: "1-5-5 Dotonbori, Chuo-ku, Osaka", phone_number: "+81 6-6212-2211", recommendation: 174, opening_time: '11h00 à 01h00', latitude: 34.669086, longitude: 135.503882)
 chibo.remote_photo_url = url
 chibo.save
 
