@@ -1,8 +1,9 @@
 <div class="b-nav">
-  <div class="localisation">Filtres</div>
+<!--   <div class = "envies"> Envie de... </div>
+ -->  <div class="localisation">Mes envies</div>
   <%= simple_form_for :search, url: specialties_path, method: "GET" do |f| %>
   <%= f.input :timetoeats, label: "Time to eat", collection: $timetoeats, as: :check_boxes, :required => false, class: "invisible" %>
-  <p class="kaka"><strong>Time to eat</strong></p>
+  <p class="kaka"><strong>Il est temps de...</strong></p>
   <% $timetoeats.each do |status| %>
     <div class="custom-control custom-switch ">
       <div class="row">
@@ -17,7 +18,7 @@
     </div>
   <% end %>
   <%= f.input :categories, label: "Category",  collection: $categories, as: :check_boxes, :required => false, class: "invisible" %>
-  <p style="margin: 10px;"><strong>Categories</strong></p>
+  <p style="margin: 10px;"><strong>Catégories</strong></p>
   <% $categories.each do |status| %>
     <div class="custom-control custom-checkbox">
       <div class="row">

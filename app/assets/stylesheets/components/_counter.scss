@@ -1,7 +1,7 @@
 .counter-up {
 display: flex;
 justify-content: space-evenly;
-height: 150px;
+height: 100px;
 align-items: center;
 padding: 56px;
 border-bottom: $oyster 1px solid;
@@ -29,4 +29,25 @@ align-items: center;
 .boxgamebottom {
   display: flex;
 }
+
+#shiva
+{
+  width: 100px;
+  height: 100px;
+  font-size: 12px;
+  // background: red;
+  // -moz-border-radius: 50px;
+  // -webkit-border-radius: 50px;
+  // border-radius: 50px;
+  // float:left;
+  // margin:5px;
+}
+.count
+{
+  line-height: 100px;
+  color:$tagada;
+  margin-left:30px;
+  font-size:25px;
+}
+
 

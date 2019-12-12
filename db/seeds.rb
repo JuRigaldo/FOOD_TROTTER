@@ -102,7 +102,7 @@ rikuro = Specialty.new(name: "Rikuro's cheesecake", description: "Il s'agit d'un
 rikuro.remote_photo_url = url
 rikuro.save
 
-url = 'https://res.cloudinary.com/geraldinefd/image/upload/v1575722253/ajinoya.jpg'
+url = 'https://res.cloudinary.com/geraldinefd/image/upload/v1576075080/Ajinoya2_ys8rov.jpg'
 ajinoya = Restaurant.create!(name: "Ajinoya", address: "1-7-16 Nambo, Chuo-ku, Osaka 542-0076", phone_number: "+ 81 6-6211-0713", recommendation: 245, opening_time: '12h00 à 22h00', latitude: 34.668327, longitude: 135.500917)
 ajinoya.remote_photo_url = url
 ajinoya.save
