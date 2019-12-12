@@ -114,12 +114,26 @@ chibo = Restaurant.new(name: "Chibo", address: "1-5-5 Dotonbori, Chuo-ku, Osaka"
 chibo.remote_photo_url = url
 chibo.save
 
+url = 'https://res.cloudinary.com/geraldinefd/image/upload/v1576167013/kiji.jpg'
+kiji = Restaurant.new(name: "Kiji", address: " Shin-Umeda Shokudogai, 9-20 Kakuda-cho, Kita-ku, Osaka-shi, 530-0017", phone_number: " +81-6-6361-5804", recommendation: 151, opening_time: '11h30 à 09h30', latitude: 34.704904, longitude: 135.490586)
+kiji.remote_photo_url = url
+kiji.save
+
+url = 'https://res.cloudinary.com/geraldinefd/image/upload/v1576167167/mizuno.jpg'
+mizuno = Restaurant.new(name: "Mizuno", address: "1 Chome-4-15 Dotonbori, Chuo Ward, Osaka, 542-0071", phone_number: " +81 6-6212-6360", recommendation: 104, opening_time: '11h00 à 22h00', latitude: 34.668611, longitude: 135.503233)
+mizuno.remote_photo_url = url
+mizuno.save
+
 specialty_resto1 = SpecialtyRestaurant.new(restaurant: ajinoya, specialty: okonomiyaki)
 specialty_resto1.save
 specialty_resto2 = SpecialtyRestaurant.new(restaurant: okaru, specialty: okonomiyaki)
 specialty_resto2.save
 specialty_resto3 = SpecialtyRestaurant.new(restaurant: chibo, specialty: okonomiyaki)
 specialty_resto3.save
+specialty_resto4 = SpecialtyRestaurant.new(restaurant: kiji, specialty: okonomiyaki)
+specialty_resto4.save
+specialty_resto5 = SpecialtyRestaurant.new(restaurant: mizuno, specialty: okonomiyaki)
+specialty_resto5.save
 
 user1 = User.create!(username: "Justine", email: "justiner@gmail.com", password: "password")
 
