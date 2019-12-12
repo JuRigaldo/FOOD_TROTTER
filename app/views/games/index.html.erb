@@ -1,35 +1,45 @@
-
-
+<div class="presentation">Justine</div>
+<div class="leveltrotter"><em>Apprentie food-trotteuse</em></div>
+   <div class="mintbox">
+   <div class="avatargame"> <%= render 'shared/avatar'  %></div>
+      <div class ="iconsgame">
+      <div class="forks"><i class="fas fa-utensils"></i></div>
+      <div class="worldworld"><i class="fas fa-globe-americas"></i></div>
+      <div class="cupyay"><i class="fas fa-trophy"></i></div>
+    </div>
+    <div class="textesicon">
+      <div class="forkfork">Food trottages</div>
+      <div class="worldtravel">Pays</div>
+      <div class="trophyyay">Points gagnés</div>
+    </div>
+    <div class="points">
+      <div class="counter">
+        <div id="shiva"><span class="count"><%=  5  %></span></div>
+      </div>
+      <div class="counter">
+        <div id="shiva"><span class="count"><%=  1  %></span></div>
+      </div>
+      <div class="counter">
+        <div id="shiva"><span class="count"><%= @games.sum{ |game| game.specialty.point } %></span></div>
+      </div>
+  </div>
+</div>
 
 <%= render 'shared/navbar-trophy' %>
 
 
 
-<div class="localisation">
-  <%= link_to specialties_path do %>
-  <i class="fas fa-arrow-left float-left" style="margin-top: 5px"></i>
-  <% end %>
-  Mes Food Winnings
-</div>
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style= "background-color:white;border-color:white;text-decoration:none;color:#1BA67F;font-size:24px;"><i class="fas fa-user-friends"></i></button>
 
 <!-- Trigger the modal with a button -->
 
 
 <%= render 'modal' %>
 
-<div class="container">
-  <div class="counter-up">
-    <div class="avatar"><%= render 'shared/avatar'  %>
-    </div>
-    <div class="points">
-      <div class="counter">
-        <div id="shiva"><span class="count"><%= @games.sum{ |game| game.specialty.point } %></span></div>
-      </div>
-      <button type="button-counter" class="btn btn-success counterbutton " style="border-radius: 50px; font-weight: bold; font-size: 12px; color: white; background-color: #1BA67F">Partager</button>
-    </div>
 
-  </div>
-  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Mes Food Winnings</button>
+
+
+
 
 
 
