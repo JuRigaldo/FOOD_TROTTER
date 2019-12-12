@@ -1,3 +1,4 @@
+<div class="margingame">
 <% @games.each do |game| %>
 <div class="game-container">
   <div class="boxgamebottom">
@@ -13,6 +14,7 @@
   </div>
 </div>
 <% end %>
+</div>
 <!-- Modal -->
 <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
@@ -103,15 +105,34 @@
               <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
             </div>
           </div>
-          <div class="pointsgame">
+          <div class="pointsgame1">
             <div class= "row3">
               <div class= "col-4">
                 <div class="avatar"><%= render 'shared/avatar'  %>
                 </div>
               </div>
               <div class= "col-4">
-                <div class= "prénoms">Justine</div>
-                <div id="shiva2">560 points
+                <div class= "prenoms1">Justine</div>
+                <div id="shiva3">560 points
+                </div>
+              </div>
+              <div class= "col-4">
+                <div class = "buttongames col-sm-4">
+                  <button type="button-gameurs1" class="btn btn-success counterbutton " style="border-radius: 50%; font-weight: bold; font-size: 16px; color: #1BA67F; width: 38px; background-color: white">></button>
+                </div>
+              </div>
+              <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+            </div>
+          </div>
+          <div class="pointsgame">
+            <div class= "row3">
+              <div class= "col-4">
+                <div class="avatar"><%= image_tag "https://kitt.lewagon.com/placeholder/users/Romain-htnr", class: "avatar-large", alt: "avatar-large" %>
+                </div>
+              </div>
+              <div class= "col-4">
+                <div class= "prénoms">Romain</div>
+                <div id="shiva2">420 points
                 </div>
               </div>
               <div class= "col-4">
