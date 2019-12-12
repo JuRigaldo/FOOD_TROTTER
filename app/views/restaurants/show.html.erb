@@ -12,11 +12,9 @@
         <% end %>
         <i class="far fa-heart favorites2 <%= current_user.favorited?(@restaurant) ? "liked" : "" %>" data-id="<%= @restaurant.id %>"></i>
       </div>
-
     </div>
   </div>
 </div>
-
 <div class="container">
   <div class="restaurant-description">
     <div class="titlerestaurant">
@@ -24,7 +22,7 @@
     </div>
     <div class="recommendation">
       <p class="food-trotters">Recommandé par&nbsp</p>
-      <p class="food-trotter"> <%=@restaurant.recommendation %>&nbspfoodtrotters</p>
+      <p class="food-trotter"> <%=@restaurant.recommendation %>&nbspfoodtrotters&nbsp&nbsp<i class="fas fa-thumbs-up"style="color:#BEC1C2;font-size:16px;"></i></p>
     </div>
     <div>
       <p class="subtitle">Informations sur le restaurant</p>
