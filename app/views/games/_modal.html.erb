@@ -1,3 +1,18 @@
+<% @games.each do |game| %>
+<div class="game-container">
+  <div class="boxgamebottom">
+    <div class="card-game" style="background-image: url('<%=cl_image_path game.specialty.photo, crop: :fit  %>">
+    </div>
+    <div class="specialtygamedescription">
+      <p class=namespecialty><%= game.specialty.name %></p>
+      <p class="specialtytext"><%= game.specialty.country%> <%= game.specialty.region %> <%= game.specialty.city %></p>
+      <div class="pointsgamedescription">
+        + <%=game.specialty.point %> pts
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
 <!-- Modal -->
 <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
@@ -5,41 +20,113 @@
     <div class="container">
       <div class="modal-content">
         <div class="modal-header">
+          <div class="localisation2">
+            Food trotteurs
+          </div>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
           <h4 class="modal-title"></h4>
-        </div>
         <div class="modal-body">
-          <div class="counter-up">
-            <div class="avatar"><%= render 'shared/avatar'  %>
-            </div>
-            <div class="points">
-              <div class="counter">
-                <div id="shiva"><span class="count"><%= @games.sum{ |game| game.specialty.point } %></span></div>
+          <div class="pointsgame">
+            <div class= "row3">
+              <div class= "col-4">
+                <div class="avatar"><%= image_tag "https://kitt.lewagon.com/placeholder/users/Corentin123", class: "avatar-large", alt: "avatar-large" %>
+                </div>
               </div>
-              <button type="button-counter" class="btn btn-success counterbutton " style="border-radius: 50px; font-weight: bold; font-size: 12px; color: white; background-color: #1BA67F">Partager</button>
+              <div class= "col-4">
+                <div class= "prénoms">Corentin</div>
+                <div id="shiva2">3 860 points
+                </div>
+              </div>
+              <div class= "col-4">
+                <div class = "buttongames col-sm-4">
+                  <button type="button-gameurs" class="btn btn-success counterbutton " style="border-radius: 50%; font-weight: bold; font-size: 16px; color: white; width: 38px; background-color: #1BA67F">></button>
+                </div>
+              </div>
+              <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
             </div>
           </div>
-          <% @games.each do |game| %>
-          <div class="game-container">
-            <div class="boxgamebottom">
-              <div class="card-game" style="background-image: url('<%=cl_image_path game.specialty.photo, crop: :fit  %>">
+          <div class="pointsgame">
+            <div class= "row3">
+              <div class= "col-4">
+                <div class="avatar"><%= image_tag "https://kitt.lewagon.com/placeholder/users/ampgn", class: "avatar-large", alt: "avatar-large" %>
+                </div>
               </div>
-              <div class="specialtygamedescription">
-                <p class=namespecialty><%= game.specialty.name %></p>
-                <p class="specialtytext"><%= game.specialty.country%> <%= game.specialty.region %><%= game.specialty.city %></p>
+              <div class= "col-4">
+                <div class= "prénoms">Annie</div>
+                <div id="shiva2">3 020 points
+                </div>
               </div>
-            </div>
-            <div class="pointsgamedescription">
-              + <%=game.specialty.point %> pts
+              <div class= "col-4">
+                <div class = "buttongames col-sm-4">
+                  <button type="button-gameurs" class="btn btn-success counterbutton " style="border-radius: 50%; font-weight: bold; font-size: 16px; color: white; width: 38px; background-color: #1BA67F">></button>
+                </div>
+              </div>
+              <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
             </div>
           </div>
-          <% end %>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <div class="pointsgame">
+            <div class= "row3">
+              <div class= "col-4">
+                <div class="avatar"><%= image_tag "https://kitt.lewagon.com/placeholder/users/Geraldinefd", class: "avatar-large", alt: "avatar-large" %>
+                </div>
+              </div>
+              <div class= "col-4">
+                <div class= "prénoms">Géraldine</div>
+                <div id="shiva2">1 440 points
+                </div>
+              </div>
+              <div class= "col-4">
+                <div class = "buttongames col-sm-4">
+                  <button type="button-gameurs" class="btn btn-success counterbutton " style="border-radius: 50%; font-weight: bold; font-size: 16px; color: white; width: 38px; background-color: #1BA67F">></button>
+                </div>
+              </div>
+              <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+            </div>
+          </div>
+          <div class="pointsgame">
+            <div class= "row3">
+              <div class= "col-4">
+                <div class="avatar"><%= image_tag "https://kitt.lewagon.com/placeholder/users/nandomando", class: "avatar-large", alt: "avatar-large" %>
+                </div>
+              </div>
+              <div class= "col-4">
+                <div class= "prénoms">Fernando</div>
+                <div id="shiva2">870 points
+                </div>
+              </div>
+              <div class= "col-4">
+                <div class = "buttongames col-sm-4">
+                  <button type="button-gameurs" class="btn btn-success counterbutton " style="border-radius: 50%; font-weight: bold; font-size: 16px; color: white; width: 38px; background-color: #1BA67F">></button>
+                </div>
+              </div>
+              <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+            </div>
+          </div>
+          <div class="pointsgame">
+            <div class= "row3">
+              <div class= "col-4">
+                <div class="avatar"><%= render 'shared/avatar'  %>
+                </div>
+              </div>
+              <div class= "col-4">
+                <div class= "prénoms">Justine</div>
+                <div id="shiva2">560 points
+                </div>
+              </div>
+              <div class= "col-4">
+                <div class = "buttongames col-sm-4">
+                  <button type="button-gameurs" class="btn btn-success counterbutton " style="border-radius: 50%; font-weight: bold; font-size: 16px; color: white; width: 38px; background-color: #1BA67F">></button>
+                </div>
+              </div>
+              <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+            </div>
+          </div>
+
+
+          <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         </div>
       </div>
     </div>
   </div>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </div>
